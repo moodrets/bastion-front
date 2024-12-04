@@ -1,7 +1,5 @@
+@use '@/styles/base/fonts.scss';
+
 @tailwind base;
-
-@layer base {
-}
-
 @tailwind components;
 @tailwind utilities;
