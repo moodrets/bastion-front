@@ -1,0 +1,10 @@
+.app-footer {
+    &__info-links {
+        @apply font-secondary
+        flex
+        flex-col
+        items-center
+        mt-10
+        gap-4;
+    }
+}

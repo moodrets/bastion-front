@@ -1,0 +1,24 @@
+.decor-link {
+    @apply relative
+        outline-none
+        no-underline
+        inline-flex
+        items-center
+        before:content-['']
+        before:absolute
+        before:-bottom-[2px]
+        before:left-0
+        before:right-0
+        before:h-[2px]
+        before:bg-current
+        before:transition-all
+        before:duration-300
+        before:scale-x-0
+        before:rounded-sm
+        hover:no-underline
+        hover:before:scale-x-100
+        focus-visible:outline-current
+        focus-visible:outline-dashed
+        focus-visible:outline-offset-4
+        [&.is-active]:before:scale-x-100;
+}

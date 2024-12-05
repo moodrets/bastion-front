@@ -1,0 +1,13 @@
+body {
+    @apply bg-dark 
+    text-secondary
+    min-w-[var(--body-min-width)]
+    font-base;
+}
+
+.centered {
+    @apply w-[var(--container-max-wdith)] 
+        max-w-full 
+        mx-auto 
+        px-4;
+}

@@ -1,5 +1,4 @@
 <template>
-    <h1 class="font-base">Contacts page / Страница контактов</h1>
     <Footer></Footer>
 </template>
 

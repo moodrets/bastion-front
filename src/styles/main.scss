@@ -1,4 +1,15 @@
-@use '@/styles/base/fonts.scss';
+// base
+@use '@/styles/base/fonts';
+@use '@/styles/base/root';
+@use '@/styles/base/defaults';
+
+// elements
+@use '@/styles/elements/angle-box';
+@use '@/styles/elements/bracket-text';
+@use '@/styles/elements/decor-link';
+
+// components
+@use '@/styles/components/footer';
 
 @tailwind base;
 @tailwind components;

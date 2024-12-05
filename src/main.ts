@@ -1,14 +1,16 @@
+// styles
 import '@/styles/main.scss';
 
 import { createApp } from 'vue';
 import { router } from '@/router';
 
+// directives
+import AngleBox from '@/directives/AngleBox';
+
 // components
 import App from '@/App.vue';
 
-const app = createApp(App);
-
-app.use(router).mount('#app');
+createApp(App).directive('angle-box', AngleBox).use(router).mount('#app');
 
 document.addEventListener('DOMContentLoaded', () => {});
 

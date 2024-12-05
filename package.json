@@ -13,6 +13,7 @@
     "dependencies": {
         "@fontsource/manrope": "^5.1.0",
         "@fontsource/michroma": "^5.1.0",
+        "@fontsource/stalinist-one": "^5.1.0",
         "vue": "^3.5.13",
         "vue-router": "^4.5.0"
     },

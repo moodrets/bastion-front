@@ -3,8 +3,13 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                brand: 'Michroma, sans-serif;',
+                brand: '"Stalinist One", sans-serif;',
+                secondary: 'Michroma, sans-serif;',
                 base: 'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+            },
+            colors: {
+                dark: '#030304',
+                secondary: '#898585',
             },
         },
     },

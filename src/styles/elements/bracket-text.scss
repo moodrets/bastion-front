@@ -1,0 +1,4 @@
+.bracket-text {
+    @apply before:content-['[']
+    after:content-[']'];
+}
