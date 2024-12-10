@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter, RouteRecordRaw } from 'vue-router';
 
-export const BASE_PATH = import.meta.env.VITE_BASE_URL;
+const BASE_PATH = import.meta.env.VITE_BASE_URL;
 
 // views
 import Contacts from '@/components/views/Contacts.vue';
@@ -16,4 +16,4 @@ const router = createRouter({
     routes,
 });
 
-export { router };
+export { router, BASE_PATH };

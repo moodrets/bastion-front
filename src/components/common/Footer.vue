@@ -12,12 +12,35 @@
                     <a class="decor-link uppercase" href="#"><span class="bracket-text">whatsapp</span></a>
                 </div>
             </div>
-            <div class="p-3" v-angle-box>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam blanditiis magnam atque officia
-                    repellat doloremque quos quia quaerat reprehenderit ratione perferendis non repudiandae, totam eius
-                    quam deserunt ducimus nisi quae?
-                </p>
+            <div class="p-3 pb-0.5" v-angle-box>
+                <div class="app-footer__middle">
+                    <img :src="`${BASE_PATH}img/footer-pic.png`" alt="" />
+                    <a href="#"><span class="bracket-text">связаться</span></a>
+                </div>
+                <div class="app-footer__bottom">
+                    <div class="app-footer__number">20</div>
+                    <div class="hidden md:block">
+                        <nav class="app-footer__nav">
+                            <ul>
+                                <li><a href="#" class="decor-link">кейсы</a></li>
+                                <li><a href="#" class="decor-link">о нас</a></li>
+                                <li><a href="#" class="decor-link">услуги</a></li>
+                                <li><a href="#" class="decor-link">контакты</a></li>
+                            </ul>
+                        </nav>
+                        <div class="app-footer__add-links">
+                            <a href="#" class="decor-link">защита персональных данных</a>
+                            <a href="#" class="decor-link">политика конфиденциальности</a>
+                            <span>Bastion Copyright © 2024</span>
+                        </div>
+                    </div>
+                    <div class="app-footer__number">24</div>
+                </div>
+            </div>
+            <div class="app-footer__add-links md:hidden">
+                <a href="#" class="decor-link">защита персональных данных</a>
+                <a href="#" class="decor-link">политика конфиденциальности</a>
+                <span>Bastion Copyright © 2024</span>
             </div>
         </div>
     </footer>
