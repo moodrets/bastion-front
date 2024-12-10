@@ -6,8 +6,10 @@ import * as url from 'url';
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
+// @ts-ignore
+export default defineConfig(({ mode }: ConfigEnv) => {
     const env = loadEnv(mode, process.cwd(), '');
+    console.log(env.VITE_BASE_URL);
 
     return {
         base: env.VITE_BASE_URL,
