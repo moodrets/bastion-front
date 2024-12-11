@@ -1,4 +1,4 @@
-const BASE_PATH = import.meta.env.MODE === 'development' ? '/' : '/bastion-front/';
+const BASE_PATH = import.meta.env.VITE_BASE_URL;
 
 const casesSliderList: { img: string; title: string }[] = [
     {

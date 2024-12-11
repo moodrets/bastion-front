@@ -11,7 +11,7 @@ export default defineConfig(({ mode }: ConfigEnv) => {
     const env = loadEnv(mode, process.cwd(), '');
 
     return {
-        base: mode === 'development' ? '/' : '/bastion-front/',
+        base: env.VITE_BASE_URL,
         plugins: [vue()],
         resolve: {
             alias: {
