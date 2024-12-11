@@ -1,9 +1,9 @@
 import { createWebHistory, createRouter, RouteRecordRaw } from 'vue-router';
+import { BASE_PATH } from '@/router/basePath';
 
 // views
 import Contacts from '@/components/views/Contacts.vue';
 import Main from '@/components/views/Main.vue';
-import { BASE_PATH } from '@/mocks';
 
 const routes: RouteRecordRaw[] = [
     { path: BASE_PATH, name: 'main', component: Main },

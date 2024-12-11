@@ -1,4 +1,4 @@
-const BASE_PATH = import.meta.env.VITE_BASE_URL;
+import { BASE_PATH } from '@/router/basePath';
 
 const casesSliderList: { img: string; title: string }[] = [
     {
@@ -43,4 +43,4 @@ const casesSliderList: { img: string; title: string }[] = [
     },
 ];
 
-export { BASE_PATH, casesSliderList };
+export { casesSliderList };

@@ -47,5 +47,5 @@
 </template>
 
 <script lang="ts" setup>
-import { BASE_PATH } from '@/mocks';
+import { BASE_PATH } from '@/router/basePath';
 </script>
