@@ -23,7 +23,8 @@
         "noUncheckedSideEffectImports": true,
         "paths": {
             "@/*": ["./src/*"]
-            // "vue": ["./node_modules/vue/dist/vue.esm-browser.js"]
+            // "vue": ["./node_modules/vue/dist/vue.esm-browser.js"],
+            // "vue": ["./node_modules/vue/dist/vue.esm-bundler.js"]
         }
     },
     "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]

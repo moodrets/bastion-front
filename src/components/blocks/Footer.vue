@@ -31,7 +31,7 @@
                         <div class="app-footer__add-links">
                             <a href="#" class="decor-link">защита персональных данных</a>
                             <a href="#" class="decor-link">политика конфиденциальности</a>
-                            <span>Bastion Copyright © 2024</span>
+                            <span class="lg:mt-4">Bastion Copyright © 2024</span>
                         </div>
                     </div>
                     <div class="app-footer__number">24</div>
@@ -47,5 +47,5 @@
 </template>
 
 <script lang="ts" setup>
-import { BASE_PATH } from '@/router';
+import { BASE_PATH } from '@/mocks';
 </script>

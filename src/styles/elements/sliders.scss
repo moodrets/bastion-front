@@ -1,0 +1,46 @@
+.cases-slider {
+    $this: &;
+
+    --slide-width: 208px;
+    --slide-height: 300px;
+
+    @screen md {
+        --slide-width: 410px;
+        --slide-height: 490px;
+    }
+
+    &__item {
+        &.swiper-slide {
+            @apply w-[var(--slide-width)];
+        }
+
+        &:hover {
+            #{$this}__card-image img {
+                @apply scale-110;
+            }
+        }
+    }
+
+    &__card-image {
+        @apply overflow-hidden
+        w-[var(--slide-width)]
+        h-[var(--slide-height)];
+
+        img {
+            @apply object-cover
+            object-center
+            w-full
+            h-full 
+            transition-all
+            duration-300;
+        }
+    }
+
+    &__card-title {
+        @apply text-right 
+            font-secondary 
+            uppercase
+            text-[18px]
+            mb-5;
+    }
+}

@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <h1>Main page</h1>
-    </div>
+    <Footer></Footer>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Footer from '@/components/blocks/Footer.vue';
+</script>

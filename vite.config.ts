@@ -9,10 +9,9 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 // @ts-ignore
 export default defineConfig(({ mode }: ConfigEnv) => {
     const env = loadEnv(mode, process.cwd(), '');
-    console.log(env.VITE_BASE_URL);
 
     return {
-        base: env.VITE_BASE_URL,
+        base: mode === 'development' ? '/' : '/bastion-front/',
         plugins: [vue()],
         resolve: {
             alias: {

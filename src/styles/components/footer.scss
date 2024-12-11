@@ -1,4 +1,6 @@
 .app-footer {
+    @apply pt-12 pb-6;
+
     &__info-links {
         @apply font-secondary
         flex
@@ -7,6 +9,7 @@
         mt-10
         gap-4
         text-[18px]
+        tracking-[5.4px]
         lg:flex-row
         lg:justify-between
         lg:pb-3;
@@ -45,14 +48,17 @@
         -tracking-[0.07em]
         text-[64px]
         font-brand
+        overflow-hidden
         pointer-events-none
+        h-[60px]
         md:text-[114px]
-        xl:text-[250px];
+        md:h-[106px]
+        xl:text-[250px]
+        xl:h-[220px];
     }
 
     &__nav {
         @apply text-center
-        pt-1.5
         text-[12px]
         hidden
         md:block
@@ -66,7 +72,6 @@
             text-center
             gap-1
             pt-4
-            pb-3
             text-[10px]
             lg:text-[16px];
     }
