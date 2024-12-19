@@ -22,10 +22,9 @@
                     <div class="hidden md:block">
                         <nav class="app-footer__nav">
                             <ul>
-                                <li><a href="#" class="decor-link">кейсы</a></li>
-                                <li><a href="#" class="decor-link">о нас</a></li>
-                                <li><a href="#" class="decor-link">услуги</a></li>
-                                <li><a href="#" class="decor-link">контакты</a></li>
+                                <li v-for="(navItem, navItemIndex) in navigation" :key="navItemIndex">
+                                    <router-link :to="{ name: navItem.name }">{{ navItem.title }}</router-link>
+                                </li>
                             </ul>
                         </nav>
                         <div class="app-footer__add-links">
@@ -48,4 +47,5 @@
 
 <script lang="ts" setup>
 import { BASE_PATH } from '@/router/basePath';
+import { navigation } from '@/mocks';
 </script>

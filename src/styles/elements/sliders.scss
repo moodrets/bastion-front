@@ -4,6 +4,8 @@
     --slide-width: 208px;
     --slide-height: 300px;
 
+    @apply py-10;
+
     @screen md {
         --slide-width: 410px;
         --slide-height: 490px;

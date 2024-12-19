@@ -43,4 +43,11 @@ const casesSliderList: { img: string; title: string }[] = [
     },
 ];
 
-export { casesSliderList };
+const navigation: { name: string; title: string }[] = [
+    { name: 'cases', title: 'кейсы' },
+    { name: 'about', title: 'о нас' },
+    { name: 'services', title: 'услуги' },
+    { name: 'contacts', title: 'контакты' },
+];
+
+export { casesSliderList, navigation };
