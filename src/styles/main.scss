@@ -10,7 +10,10 @@
 @use '@/styles/elements/sliders';
 
 // components
-@use '@/styles/components/footer';
+
+// blocks
+@use '@/styles/blocks/footer';
+@use '@/styles/blocks/contact-links';
 
 @tailwind base;
 @tailwind components;

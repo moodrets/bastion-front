@@ -4,6 +4,8 @@
         no-underline
         inline-flex
         items-center
+        transition-all
+        duration-300
         before:content-['']
         before:absolute
         before:-bottom-[2px]
@@ -21,4 +23,20 @@
         focus-visible:outline-dashed
         focus-visible:outline-offset-4
         [&.is-active]:before:scale-x-100;
+
+    &--hover-x {
+        @apply hover:translate-x-[20px];
+    }
+
+    &--hover-y {
+        @apply hover:translate-y-[20px];
+    }
+
+    &--hover-scale-up {
+        @apply hover:scale-[1.02];
+    }
+
+    &--hover-scale-down {
+        @apply hover:scale-[0.9];
+    }
 }
