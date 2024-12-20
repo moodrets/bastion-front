@@ -4,6 +4,7 @@
 @use '@/styles/base/defaults';
 
 // elements
+@use '@/styles/elements/button';
 @use '@/styles/elements/angle-box';
 @use '@/styles/elements/bracket-text';
 @use '@/styles/elements/decor-link';
@@ -13,6 +14,7 @@
 
 // blocks
 @use '@/styles/blocks/footer';
+@use '@/styles/blocks/contact-main';
 @use '@/styles/blocks/contact-links';
 
 @tailwind base;

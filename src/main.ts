@@ -2,6 +2,10 @@
 import '@/styles/main.scss';
 import 'swiper/css';
 
+// scripts
+import { initCasesSlider } from '@/scripts/Sliders';
+import { initScrollToOnLoad } from '@/scripts/ScrollTo';
+
 // vue imports
 import { createApp } from 'vue';
 import { router } from '@/router';
@@ -12,13 +16,16 @@ import AngleBox from '@/directives/AngleBox';
 // vue components
 import App from '@/App.vue';
 
-function bootstrap() {
+function vueBootstrap() {
     createApp(App).use(router).directive('angle-box', AngleBox).mount('#app');
 }
 
-bootstrap();
+vueBootstrap();
 
-document.addEventListener('DOMContentLoaded', () => {});
+document.addEventListener('DOMContentLoaded', () => {
+    // initCasesSlider();
+    // initScrollToOnLoad();
+});
 
 document.fonts.ready.then(() => {
     document.querySelector('.app-wrapper')?.classList.add('is-fonts-loaded');

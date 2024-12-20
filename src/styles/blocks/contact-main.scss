@@ -1,0 +1,28 @@
+.contact-main {
+    @apply pt-[160px]
+    md:pt-[220px]
+    xl:pt-[260px]
+    pb-10;
+
+    &__header {
+        @apply leading-[1.1]
+        text-[40px]
+        md:text-[64px]
+        xl:text-[142px]
+        pb-5
+        border-b-[3px]
+        border-white
+        border-opacity-20
+        mb-10;
+    }
+
+    &__title {
+        @apply max-w-[50%]
+        md:max-w-[50%]
+        lg:max-w-[40%];
+    }
+
+    &__subtitle {
+        @apply text-right;
+    }
+}

@@ -23,7 +23,9 @@
                         <nav class="app-footer__nav">
                             <ul>
                                 <li v-for="(navItem, navItemIndex) in navigation" :key="navItemIndex">
-                                    <router-link :to="{ name: navItem.name }">{{ navItem.title }}</router-link>
+                                    <router-link class="decor-link" :to="{ name: navItem.name }">
+                                        {{ navItem.title }}
+                                    </router-link>
                                 </li>
                             </ul>
                         </nav>

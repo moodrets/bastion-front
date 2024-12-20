@@ -10,6 +10,8 @@ export default {
             colors: {
                 dark: '#030304',
                 secondary: '#898585',
+                neutral: '#615D5D',
+                'button-bg': '#302D2D66',
             },
         },
     },

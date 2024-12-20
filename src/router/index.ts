@@ -1,6 +1,9 @@
 import { createWebHistory, createRouter, RouteRecordRaw } from 'vue-router';
 import { BASE_PATH } from '@/router/basePath';
 
+// scripts
+import { initScrollToOnLoad } from '@/scripts/ScrollTo';
+
 // views
 import Main from '@/components/views/Main.vue';
 import Cases from '@/components/views/Cases.vue';
@@ -19,6 +22,12 @@ const routes: RouteRecordRaw[] = [
 const router = createRouter({
     history: createWebHistory(),
     routes,
+});
+
+router.afterEach(() => {
+    setTimeout(() => {
+        initScrollToOnLoad();
+    }, 150);
 });
 
 export { router };

@@ -23,4 +23,8 @@
 
 <script setup lang="ts">
 import { casesSliderList } from '@/mocks';
+import { initCasesSlider } from '@/scripts/Sliders';
+import { useSwiper } from '@/composables/useSwiper';
+
+useSwiper(initCasesSlider);
 </script>
