@@ -9,6 +9,7 @@
 @use '@/styles/elements/bracket-text';
 @use '@/styles/elements/decor-link';
 @use '@/styles/elements/sliders';
+@use '@/styles/elements/forms';
 
 // components
 
@@ -16,6 +17,7 @@
 @use '@/styles/blocks/footer';
 @use '@/styles/blocks/contact-main';
 @use '@/styles/blocks/contact-links';
+@use '@/styles/blocks/contact-form';
 
 @tailwind base;
 @tailwind components;

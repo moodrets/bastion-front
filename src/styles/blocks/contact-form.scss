@@ -1,0 +1,40 @@
+.contact-form {
+    &__header {
+        @apply flex
+        flex-col
+        gap-12
+        mb-5
+        tracking-wide
+        uppercase
+        font-secondary
+        text-[12px]
+        md:text-[18px]
+        lg:grid
+        lg:grid-cols-2
+        lg:gap-5
+        lg:mb-20;
+    }
+
+    &__title {
+        @apply text-[20px]
+        font-medium
+        md:text-[40px]
+        md:max-w-[60%];
+    }
+
+    &__container {
+        @apply mb-5
+            md:mb-20
+            lg:grid 
+            lg:grid-cols-2 
+            lg:gap-5;
+    }
+
+    &__pic {
+        img {
+            @apply max-w-[270px]
+            hidden
+            lg:block;
+        }
+    }
+}

@@ -1,8 +1,9 @@
 .contact-main {
     @apply pt-[160px]
+    pb-10
     md:pt-[220px]
     xl:pt-[260px]
-    pb-10;
+    xl:pb-20;
 
     &__header {
         @apply leading-[1.1]
@@ -12,8 +13,7 @@
         pb-5
         border-b-[3px]
         border-white
-        border-opacity-20
-        mb-10;
+        border-opacity-20;
     }
 
     &__title {
