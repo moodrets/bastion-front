@@ -1,6 +1,5 @@
 // styles
-import '@/styles/main.scss';
-import 'swiper/css';
+import '@/styles/main.css';
 
 // scripts
 import { initCasesSlider } from '@/scripts/Sliders';

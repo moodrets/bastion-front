@@ -1,0 +1,24 @@
+body {
+    @apply bg-dark 
+        text-secondary
+        min-w-[var(--body-min-width)]
+        font-base;
+}
+
+.centered {
+    @apply w-[var(--container-max-width)] 
+            max-w-full 
+            mx-auto 
+            px-2;
+}
+
+.app-wrapper {
+    @apply opacity-0 
+            scale-90
+            transition-all
+            duration-[.4s];
+
+    &.is-fonts-loaded {
+        @apply opacity-100 scale-100;
+    }
+}

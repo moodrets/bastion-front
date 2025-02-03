@@ -14,8 +14,7 @@
         w-8
         h-8
         border-2
-        border-white
-        border-opacity-20
+        border-white/20
         absolute;
     }
 

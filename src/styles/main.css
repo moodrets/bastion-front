@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+
+@theme {
+    --font-brand: 'Stalinist One', sans-serif;
+    --font-secondary: Michroma, sans-serif;
+    --font-base: Manrope, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    --color-dark: #030304;
+    --color-secondary: #898585;
+    --color-neutral: #615d5d;
+    --color-button-bg: #302d2d66;
+}
+
+@layer base {
+    @import 'swiper/css';
+    @import '@/styles/base/fonts.css';
+    @import '@/styles/base/root.css';
+    @import '@/styles/base/defaults.css';
+}
+
+@layer components {
+    /* components */
+    @import '@/styles/elements/button.css';
+    @import '@/styles/elements/angle-box.css';
+    @import '@/styles/elements/bracket-text.css';
+    @import '@/styles/elements/decor-link.css';
+    @import '@/styles/elements/sliders.css';
+    @import '@/styles/elements/forms.css';
+
+    /* blocks */
+    @import '@/styles/blocks/footer.css';
+    @import '@/styles/blocks/contact-main.css';
+    @import '@/styles/blocks/contact-links.css';
+    @import '@/styles/blocks/contact-form.css';
+}

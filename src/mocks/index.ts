@@ -48,6 +48,7 @@ const navigation: { name: string; title: string }[] = [
     { name: 'about', title: 'о нас' },
     { name: 'services', title: 'услуги' },
     { name: 'contacts', title: 'контакты' },
+    { name: 'styles', title: 'стили' },
 ];
 
 export { casesSliderList, navigation };

@@ -10,7 +10,7 @@
             <input type="text" class="form-control" placeholder="интересующая задача" />
         </div>
         <div class="form-field">
-            <button type="submit" class="button">
+            <button type="submit" class="button button--responsive w-full">
                 <span class="bracket-text">отправить</span>
             </button>
         </div>
