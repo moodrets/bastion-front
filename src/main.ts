@@ -1,6 +1,7 @@
 // styles
-import '@/styles/base/fonts.css';
-import '@/styles/main.css';
+// @ts-ignore
+import '@/styles/base/fonts.scss';
+import '@/styles/main.scss';
 
 // scripts
 // import { initCasesSlider } from '@/scripts/Sliders';

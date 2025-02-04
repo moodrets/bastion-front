@@ -1,0 +1,26 @@
+@layer components {
+    .form-control {
+        @apply border-x-0
+            border-t-0
+            border-b-[3px]
+            border-white/30
+            bg-transparent
+            outline-none
+            text-secondary
+            text-[12px]
+            tracking-wide
+            py-2.5
+            block
+            w-full
+            transition-all
+            placeholder:text-secondary
+            placeholder:uppercase
+            focus:border-white/50
+            md:text-[18px];
+    }
+
+    .form-field {
+        @apply mb-5
+            last:mb-0;
+    }
+}

@@ -1,0 +1,35 @@
+// tailwind
+@use 'tailwindcss';
+
+// base
+@use 'swiper/scss';
+@use './base/defaults';
+
+@use './elements/button';
+@use './elements/angle-box';
+@use './elements/bracket-text';
+@use './elements/decor-link';
+@use './elements/sliders';
+@use './elements/forms';
+
+// blocks
+@use './blocks/footer';
+@use './blocks/contact-main';
+@use './blocks/contact-links';
+@use './blocks/contact-form';
+
+// theme
+@at-root {
+    @theme {
+        --font-brand: 'Stalinist One', sans-serif;
+        --font-secondary: Michroma, sans-serif;
+        --font-base: Manrope, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+            'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        --color-dark: #030304;
+        --color-secondary: #898585;
+        --color-neutral: #615d5d;
+        --color-button-bg: #302d2d66;
+        --body-min-width: 320px;
+        --container-max-width: 1880px;
+    }
+}
