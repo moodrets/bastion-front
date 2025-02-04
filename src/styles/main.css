@@ -9,27 +9,27 @@
     --color-secondary: #898585;
     --color-neutral: #615d5d;
     --color-button-bg: #302d2d66;
+    --body-min-width: 320px;
+    --container-max-width: 1880px;
 }
 
 @layer base {
     @import 'swiper/css';
-    @import '@/styles/base/fonts.css';
-    @import '@/styles/base/root.css';
-    @import '@/styles/base/defaults.css';
+    @import './base/defaults.css';
 }
 
 @layer components {
-    /* components */
-    @import '@/styles/elements/button.css';
-    @import '@/styles/elements/angle-box.css';
-    @import '@/styles/elements/bracket-text.css';
-    @import '@/styles/elements/decor-link.css';
-    @import '@/styles/elements/sliders.css';
-    @import '@/styles/elements/forms.css';
+    /* elements */
+    @import './elements/button.css';
+    @import './elements/angle-box.css';
+    @import './elements/bracket-text.css';
+    @import './elements/decor-link.css';
+    @import './elements/sliders.css';
+    @import './elements/forms.css';
 
     /* blocks */
-    @import '@/styles/blocks/footer.css';
-    @import '@/styles/blocks/contact-main.css';
-    @import '@/styles/blocks/contact-links.css';
-    @import '@/styles/blocks/contact-form.css';
+    @import './blocks/footer.css';
+    @import './blocks/contact-main.css';
+    @import './blocks/contact-links.css';
+    @import './blocks/contact-form.css';
 }

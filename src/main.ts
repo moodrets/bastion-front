@@ -1,9 +1,10 @@
 // styles
+import '@/styles/base/fonts.css';
 import '@/styles/main.css';
 
 // scripts
-import { initCasesSlider } from '@/scripts/Sliders';
-import { initScrollToOnLoad } from '@/scripts/ScrollTo';
+// import { initCasesSlider } from '@/scripts/Sliders';
+// import { initScrollToOnLoad } from '@/scripts/ScrollTo';
 
 // vue imports
 import { createApp } from 'vue';

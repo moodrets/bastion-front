@@ -1,6 +1,5 @@
 import { ConfigEnv, defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 import * as url from 'url';
 
@@ -13,7 +12,7 @@ export default defineConfig(({ mode }: ConfigEnv) => {
 
     return {
         base: env.VITE_BASE_URL,
-        plugins: [vue(), tailwindcss()],
+        plugins: [vue()],
         resolve: {
             alias: {
                 '@': path.resolve(__dirname, 'src'),
