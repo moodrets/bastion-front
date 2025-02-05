@@ -1,38 +1,36 @@
-@layer components {
-    .angle-box {
-        @apply relative;
+.angle-box {
+    @apply relative;
 
-        &__elems-left,
-        &__elems-right {
-            @apply pointer-events-none;
-        }
+    &__elems-left,
+    &__elems-right {
+        @apply pointer-events-none;
+    }
 
-        &__elems-left:before,
-        &__elems-left:after,
-        &__elems-right:before,
-        &__elems-right:after {
-            @apply content-['']
+    &__elems-left:before,
+    &__elems-left:after,
+    &__elems-right:before,
+    &__elems-right:after {
+        @apply content-['']
             w-8
             h-8
             border-2
             border-white/20
             absolute;
-        }
+    }
 
-        &__elems-left:before {
-            @apply left-0 top-0 border-b-0 border-r-0;
-        }
+    &__elems-left:before {
+        @apply left-0 top-0 border-b-0 border-r-0;
+    }
 
-        &__elems-left:after {
-            @apply left-0 bottom-0 border-t-0 border-r-0;
-        }
+    &__elems-left:after {
+        @apply left-0 bottom-0 border-t-0 border-r-0;
+    }
 
-        &__elems-right:before {
-            @apply right-0 top-0 border-l-0 border-b-0;
-        }
+    &__elems-right:before {
+        @apply right-0 top-0 border-l-0 border-b-0;
+    }
 
-        &__elems-right:after {
-            @apply right-0 bottom-0 border-l-0 border-t-0;
-        }
+    &__elems-right:after {
+        @apply right-0 bottom-0 border-l-0 border-t-0;
     }
 }

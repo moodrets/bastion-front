@@ -1,91 +1,89 @@
-@layer components {
-    @keyframes buttonOutlineScale {
-        0% {
-            opacity: 0.2;
-        }
-        50% {
-            opacity: 0.6;
-        }
-
-        70% {
-            opacity: 0.2;
-        }
-        100% {
-            opacity: 0;
-            transform: scaleX(1.1) scaleY(1.4);
-        }
+@keyframes buttonOutlineScale {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.6;
     }
 
-    .button {
-        @apply cursor-pointer
-            outline-none
-            relative
-            z-[1]
-            border-none
-            inline-flex
-            justify-center
-            items-center
-            gap-3
-            no-underline
-            text-[10px]
-            leading-normal
-            tracking-[0.3em]
-            uppercase
-            font-secondary
-            text-neutral
-            bg-button-bg
-            py-6.5
-            px-10
-            transition-all
-            duration-300
-            ring-2
-            ring-button-bg/0
-            active:scale-[0.96]
-            focus-within:ring-white/40
-            hover:ring-white/40
-            hover:before:animate-[buttonOutlineScale_0.3s_ease-in-out];
+    70% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0;
+        transform: scaleX(1.1) scaleY(1.4);
+    }
+}
 
-        &:before {
-            @apply content-['']
-                pointer-events-none
-                absolute
-                inset-0
-                rounded-[inherit]
-                transition-[inherit]
-                duration-[inherit]            
-                opacity-0
-                ring-2            
-                ring-white/40;
-        }
+.button {
+    @apply cursor-pointer
+        outline-none
+        relative
+        z-[1]
+        border-none
+        inline-flex
+        justify-center
+        items-center
+        gap-3
+        no-underline
+        text-[10px]
+        leading-normal
+        tracking-[0.3em]
+        uppercase
+        font-secondary
+        text-neutral
+        bg-button-bg
+        py-6
+        px-10
+        transition-all
+        duration-300
+        ring-2
+        ring-button-bg/0
+        active:scale-[0.96]
+        focus-within:ring-white/40
+        hover:ring-white/40
+        hover:before:animate-[buttonOutlineScale_0.3s_ease-in-out];
 
-        &--md {
-            @apply text-[18px] py-9;
-        }
+    &:before {
+        @apply content-['']
+            pointer-events-none
+            absolute
+            inset-0
+            rounded-[inherit]
+            transition-[inherit]
+            duration-[inherit]            
+            opacity-0
+            ring-2            
+            ring-white/40;
+    }
 
-        &--lg {
-            @apply text-[22px] py-10;
-        }
+    &--md {
+        @apply text-[18px] py-9;
+    }
 
-        &--responsive {
-            @apply md:text-[18px] 
+    &--lg {
+        @apply text-[22px] py-10;
+    }
+
+    &--responsive {
+        @apply md:text-[18px] 
             md:py-9
             lg:text-[22px]
             lg:py-10;
-        }
+    }
 
-        &--outlined {
-            @apply rounded-md
+    &--outlined {
+        @apply rounded-md
             ring-white/20
             focus-within:ring-white/40
             hover:ring-white/40
             before:ring-white/40;
-        }
+    }
 
-        &[disabled],
-        &.disabled {
-            @apply pointer-events-none 
-                opacity-60
-                grayscale-100;
-        }
+    &[disabled],
+    &.disabled {
+        @apply pointer-events-none 
+            opacity-70
+            grayscale-[1];
     }
 }

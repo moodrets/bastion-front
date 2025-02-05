@@ -25,10 +25,11 @@
         }
 
         &__subtitle {
-            @apply self-end 
-                max-w-[70%]
-                md:max-w-[60%]
-                lg:max-w-[50%];
+            @apply self-end
+                w-[70%]
+                text-right
+                md:w-[50%]
+                md:text-left;
         }
     }
 }

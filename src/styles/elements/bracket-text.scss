@@ -1,6 +1,4 @@
-@layer components {
-    .bracket-text {
-        @apply before:content-['[']
-            after:content-[']'];
-    }
+.bracket-text {
+    @apply before:content-['[']
+        after:content-[']'];
 }
