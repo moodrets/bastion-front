@@ -2,21 +2,21 @@
 @use 'tailwindcss';
 
 // base
-@use 'swiper/scss';
-@use './base/defaults';
+@use '@/styles/base/libs';
+@use '@/styles/base/defaults';
 
-@use './elements/button';
-@use './elements/angle-box';
-@use './elements/bracket-text';
-@use './elements/decor-link';
-@use './elements/sliders';
-@use './elements/forms';
+@use '@/styles/elements/button';
+@use '@/styles/elements/angle-box';
+@use '@/styles/elements/bracket-text';
+@use '@/styles/elements/decor-link';
+@use '@/styles/elements/sliders';
+@use '@/styles/elements/forms';
 
 // blocks
-@use './blocks/footer';
-@use './blocks/contact-main';
-@use './blocks/contact-links';
-@use './blocks/contact-form';
+@use '@/styles/blocks/footer';
+@use '@/styles/blocks/contact-main';
+@use '@/styles/blocks/contact-links';
+@use '@/styles/blocks/contact-form';
 
 // theme
 @at-root {

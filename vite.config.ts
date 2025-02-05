@@ -16,6 +16,7 @@ export default defineConfig(({ mode }: ConfigEnv) => {
         resolve: {
             alias: {
                 '@': path.resolve(__dirname, 'src'),
+                node_modules: path.resolve(__dirname, 'node_modules'),
             },
         },
         server: {

@@ -10,10 +10,12 @@
             @apply leading-[1.1]
                 text-[40px]
                 md:text-[64px]
-                xl:text-[142px]
+                xl:text-[126px]
                 pb-5
                 border-b-[3px]
-                border-white/20;
+                border-white/20
+                flex
+                flex-col;
         }
 
         &__title {
@@ -23,7 +25,10 @@
         }
 
         &__subtitle {
-            @apply text-right;
+            @apply self-end 
+                max-w-[70%]
+                md:max-w-[60%]
+                lg:max-w-[50%];
         }
     }
 }
