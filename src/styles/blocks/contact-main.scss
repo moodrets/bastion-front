@@ -1,35 +1,33 @@
-@layer components {
-    .contact-main {
-        @apply pt-[160px]
+.contact-main {
+    @apply pt-[160px]
             pb-10
             md:pt-[220px]
             xl:pt-[260px]
             xl:pb-20;
 
-        &__header {
-            @apply leading-[1.1]
-                text-[40px]
-                md:text-[64px]
-                xl:text-[126px]
-                pb-5
-                border-b-[3px]
-                border-white/20
-                flex
-                flex-col;
-        }
+    &__header {
+        @apply leading-[1.1]
+            text-[40px]
+            md:text-[64px]
+            xl:text-[126px]
+            pb-5
+            border-b-[3px]
+            border-white/20
+            flex
+            flex-col;
+    }
 
-        &__title {
-            @apply max-w-[50%]
-                md:max-w-[50%]
-                lg:max-w-[40%];
-        }
+    &__title {
+        @apply max-w-[50%]
+            md:max-w-[50%]
+            lg:max-w-[40%];
+    }
 
-        &__subtitle {
-            @apply self-end
-                w-[70%]
-                text-right
-                md:w-[50%]
-                md:text-left;
-        }
+    &__subtitle {
+        @apply self-end
+            w-[70%]
+            text-right
+            md:w-[50%]
+            md:text-left;
     }
 }

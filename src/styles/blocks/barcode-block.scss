@@ -1,0 +1,54 @@
+.barcode-block {
+    @apply py-14;
+
+    &__inner {
+        @apply bg-cover/50
+        p-6
+        lg:p-14;
+    }
+
+    &__text {
+        @apply text-balance
+        text-[22px]
+        md:text-[50px];
+    }
+
+    &__title {
+        @apply w-[67%]
+            lg:w-[35%];
+    }
+
+    &__subtitle {
+        @apply text-center;
+    }
+
+    &__middle {
+        @apply py-[150px]
+            flex;
+
+        .decor-link {
+            @apply mt-4 
+                uppercase 
+                tracking-[0.3em]
+                justify-center;
+        }
+    }
+
+    &__item {
+        @apply cursor-pointer
+            p-3
+            mx-auto
+            flex
+            flex-col
+            items-center
+            text-center
+            text-[12px]
+            md:text-[18px]
+            md:p-14;
+    }
+
+    &__bottom {
+        @apply text-center
+            md:text-right;
+    }
+}

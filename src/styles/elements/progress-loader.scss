@@ -1,0 +1,33 @@
+@keyframes progressFade {
+    0%,
+    100% {
+        @apply opacity-0;
+    }
+
+    50% {
+        @apply opacity-100;
+    }
+}
+
+.progress-loader {
+    --cell-width: 6px;
+    --cell-height: 14px;
+
+    @apply inline-flex
+        items-center
+        gap-0.5;
+
+    &__item {
+        @apply w-[var(--cell-width)]
+        h-[var(--cell-height)]
+        animate-[1.5s_progressFade_infinite]
+        bg-warning
+        shadow-progress-loader;
+
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i * 0.1s};
+            }
+        }
+    }
+}

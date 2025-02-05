@@ -10,6 +10,7 @@
 
 // elements
 @use '@/styles/tailwindcss/components';
+@use '@/styles/elements/progress-loader';
 @use '@/styles/elements/button';
 @use '@/styles/elements/angle-box';
 @use '@/styles/elements/bracket-text';
@@ -22,6 +23,7 @@
 @use '@/styles/blocks/contact-main';
 @use '@/styles/blocks/contact-links';
 @use '@/styles/blocks/contact-form';
+@use '@/styles/blocks/barcode-block';
 
 // utilities
 @use '@/styles/tailwindcss/utilities';

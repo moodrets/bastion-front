@@ -58,11 +58,11 @@
     }
 
     &--md {
-        @apply text-[18px] py-9;
+        @apply text-[18px] py-10 px-12;
     }
 
     &--lg {
-        @apply text-[22px] py-10;
+        @apply text-[22px] py-11 px-14;
     }
 
     &--responsive {

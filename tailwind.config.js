@@ -9,9 +9,14 @@ export default {
             },
             colors: {
                 dark: '#030304',
+                cover: '#161415',
+                warning: '#FE5900',
                 secondary: '#898585',
                 neutral: '#615D5D',
                 'button-bg': '#302D2D66',
+            },
+            boxShadow: {
+                'progress-loader': '0px 0px 15px 0 #FE5900',
             },
         },
     },

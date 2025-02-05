@@ -14,8 +14,10 @@
             </div>
             <div class="p-3 pb-0.5" v-angle-box>
                 <div class="app-footer__middle">
-                    <img :src="`${BASE_PATH}img/footer-pic.png`" alt="" />
-                    <a href="#"><span class="bracket-text">связаться</span></a>
+                    <div class="flex flex-col items-center text-center">
+                        <img :src="`${BASE_PATH}img/footer-pic.png`" alt="" />
+                        <a href="#" class="mt-4 decor-link"><span class="bracket-text">связаться</span></a>
+                    </div>
                 </div>
                 <div class="app-footer__bottom">
                     <div class="app-footer__number">20</div>
