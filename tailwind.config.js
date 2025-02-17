@@ -13,7 +13,7 @@ export default {
                 warning: '#FE5900',
                 secondary: '#898585',
                 neutral: '#615D5D',
-                'button-bg': '#302D2D66',
+                'button-bg': '#302D2D',
             },
             boxShadow: {
                 'progress-loader': '0px 0px 15px 0 #FE5900',

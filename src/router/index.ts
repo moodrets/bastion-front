@@ -3,6 +3,7 @@ import { BASE_PATH } from '@/router/basePath';
 
 // scripts
 import { initScrollToOnLoad } from '@/scripts/ScrollTo';
+import { threeMainScene } from '@/scripts/ThreeMainScene';
 
 // views
 import Main from '@/components/views/Main.vue';
@@ -24,11 +25,15 @@ const routes: RouteRecordRaw[] = [
 const router = createRouter({
     history: createWebHistory(),
     routes,
+    scrollBehavior(to, from, savedPosition) {
+        return { top: 0, behavior: 'smooth' };
+    },
 });
 
 router.afterEach(() => {
     setTimeout(() => {
         initScrollToOnLoad();
+        threeMainScene.init();
     }, 150);
 });
 

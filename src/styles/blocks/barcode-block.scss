@@ -36,7 +36,9 @@
 
     &__item {
         @apply cursor-pointer
-            p-3
+            py-4
+            px-3
+            pb-3
             mx-auto
             flex
             flex-col

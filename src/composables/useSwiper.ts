@@ -1,12 +1,12 @@
 import { Swiper } from 'swiper';
 import { onBeforeUnmount, onMounted } from 'vue';
 
-export function useSwiper(initSliderFunc: () => Swiper | Swiper[], timeout: number = 0) {
+export function useSwiper(initSwiperFunc: () => Swiper | Swiper[], timeout: number = 0) {
     let swiper: Swiper | Swiper[] | null = null;
 
     onMounted(() => {
         setTimeout(() => {
-            swiper = initSliderFunc();
+            swiper = initSwiperFunc();
         }, timeout);
     });
 

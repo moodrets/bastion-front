@@ -1,0 +1,38 @@
+.main-block {
+    @apply h-[1920px]
+    overflow-hidden
+    pt-3;
+
+    &__logo {
+        @apply p-3
+            mb-3
+            select-none;
+    }
+
+    &__desc {
+        @apply text-center
+            text-secondary
+            text-[12px]
+            leading-[1.45]
+            md:text-[18px]
+            md:max-w-[90%]
+            md:mx-auto
+            xl:text-[22px]
+            xl:max-w-[70%];
+    }
+
+    &__links {
+        @apply flex
+        gap-3
+        mb-2
+        mt-[420px]
+        md:mt-[550px]
+        xl:mt-[620px];
+
+        .button {
+            @apply min-w-[250px]
+            md:min-w-[360px]
+            xl:min-w-[390px];
+        }
+    }
+}

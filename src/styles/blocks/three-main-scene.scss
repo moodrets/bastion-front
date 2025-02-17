@@ -1,0 +1,9 @@
+.three-main-scene {
+    @apply h-[1920px] 
+        -z-[1] 
+        absolute 
+        left-0 
+        top-0 
+        right-0
+        pointer-events-none;
+}
