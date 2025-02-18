@@ -1,9 +1,19 @@
 .three-main-scene {
-    @apply h-[1920px] 
+    @apply h-[inherit]
         -z-[1] 
         absolute 
+        overflow-hidden
         left-0 
         top-0 
         right-0
         pointer-events-none;
+
+    &__canvas {
+        @apply absolute
+            w-full
+            h-full
+            top-0
+            left-1/2
+            -translate-x-1/2;
+    }
 }

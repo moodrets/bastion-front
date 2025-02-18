@@ -1,44 +1,44 @@
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/Addons.js';
+import { glbLoader } from '@/scripts/ThreeLoaders';
 import { BASE_PATH } from '@/router/basePath';
 
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
-import { OrbitControls, RectAreaLightUniformsLib } from 'three/examples/jsm/Addons.js';
-
-const loader = new GLTFLoader();
-const dracoLoader = new DRACOLoader();
-dracoLoader.setDecoderPath(`${BASE_PATH}models/draco/`);
-loader.setDRACOLoader(dracoLoader);
-dracoLoader.preload();
-
-type THREEUnknownObject = Record<string, any>;
-
-class ThreeMainScene {
+export class ThreeMainScene {
     constructor({ renderElemSelector }: { renderElemSelector: string }) {
         this.renderElemSelector = renderElemSelector;
     }
 
-    scene!: THREE.Scene;
+    protected scene!: THREE.Scene;
 
-    camera!: THREE.Camera;
+    protected camera!: THREE.PerspectiveCamera;
 
-    renderer!: THREEUnknownObject;
+    protected renderer!: THREE.WebGLRenderer;
 
-    planeMateral!: THREE.Material;
+    protected renderElemSelector!: string;
 
-    renderElemSelector!: string;
+    protected renderElemRect!: DOMRect;
 
-    renderElemRect!: DOMRect;
+    protected renderElem: HTMLElement | null = null;
 
-    renderElem: HTMLElement | null = null;
+    protected modelPath!: string;
 
-    modelPath!: string;
+    protected modelLaptop!: THREE.Group<THREE.Object3DEventMap>;
 
-    animatePlaceTime = 0;
+    protected modelRock1!: THREE.Group<THREE.Object3DEventMap>;
 
-    public animateScene() {
+    protected modelRock2!: THREE.Group<THREE.Object3DEventMap>;
+
+    protected modelRock3!: THREE.Group<THREE.Object3DEventMap>;
+
+    protected pointLight!: THREE.PointLight;
+
+    protected planeAnimationTime = 0;
+
+    protected planeUniforms!: Record<string, any>;
+
+    protected animateScene() {
         requestAnimationFrame(this.animateScene.bind(this));
-        this.animatePlane();
+        // this.animatePlane();
         this.renderer.render(this.scene, this.camera);
     }
 
@@ -55,122 +55,96 @@ class ThreeMainScene {
         this.renderer = new THREE.WebGLRenderer({ antialias: true });
         this.renderer.setSize(this.renderElemRect.width, this.renderElemRect.height);
         this.renderElem?.appendChild(this.renderer.domElement);
+        // this.renderer.setPixelRatio(window.devicePixelRatio);
     }
 
     protected setScene(): void {
         this.scene = new THREE.Scene();
     }
 
-    protected loadModelBackground() {
-        loader.load(`${BASE_PATH}models/compressed/background.glb`, (gltf) => {
-            const model = gltf.scene;
-            model.position.set(0, 0, 1);
-            model.scale.set(0.08, 0.08, 0.08);
-            this.scene.add(model);
+    protected async loadModelLaptop(): Promise<void> {
+        return new Promise((res) => {
+            glbLoader.load(`${BASE_PATH}models/compressed/laptop.glb`, (gltf) => {
+                this.modelLaptop = gltf.scene;
+                this.modelLaptop.position.set(-0.1, 3.1, 0);
+                this.modelLaptop.scale.set(0.1, 0.1, 0.1);
+                this.modelLaptop.rotation.x = 0.2;
+                this.modelLaptop.rotation.y = -0.1;
+                this.scene.add(this.modelLaptop);
+                res();
+            });
         });
     }
 
-    protected loadModelLaptop() {
-        loader.load(`${BASE_PATH}models/compressed/laptop.glb`, (gltf) => {
-            const model = gltf.scene;
-            model.position.set(0, 2.7, 0);
-            model.scale.set(0.08, 0.08, 0.08);
-            model.rotation.x = 0.1;
-            model.rotation.y = -0.1;
-            this.scene.add(model);
+    protected async loadModelRock1(): Promise<void> {
+        return new Promise((res) => {
+            glbLoader.load(`${BASE_PATH}models/compressed/rock1.glb`, (gltf) => {
+                this.modelRock1 = gltf.scene;
+                this.modelRock1.position.set(0.45, 2.8, 0);
+                this.modelRock1.rotation.x = 0.3;
+                this.modelRock1.scale.set(0.08, 0.08, 0.08);
+                this.scene.add(this.modelRock1);
+                res();
+            });
         });
     }
 
-    protected loadModelRock1() {
-        loader.load(`${BASE_PATH}models/compressed/rock1.glb`, (gltf) => {
-            const model = gltf.scene;
-            model.position.set(0, 2.3, 0);
-            model.rotation.x = 0.3;
-            model.scale.set(0.08, 0.08, 0.08);
-            this.scene.add(model);
+    protected async loadModelRock2(): Promise<void> {
+        return new Promise((res) => {
+            glbLoader.load(`${BASE_PATH}models/compressed/rock2.glb`, (gltf) => {
+                this.modelRock2 = gltf.scene;
+                this.modelRock2.position.set(0, 2.9, -12);
+                this.modelRock2.scale.set(0.12, 0.12, 0.12);
+                this.modelRock2.rotation.x = 0.1;
+                this.scene.add(this.modelRock2);
+                res();
+            });
         });
     }
 
-    protected loadModelRock2() {
-        loader.load(`${BASE_PATH}models/compressed/rock2.glb`, (gltf) => {
-            const model = gltf.scene;
-            model.position.set(0, 3.6, -12);
-            model.scale.set(0.12, 0.12, 0.12);
-            model.rotation.x = 0.1;
-            this.scene.add(model);
-        });
-    }
-
-    protected loadModelRock3() {
-        loader.load(`${BASE_PATH}models/compressed/rock3.glb`, (gltf) => {
-            const model = gltf.scene;
-            model.position.set(0, 5, 0);
-            model.scale.set(0.04, 0.04, 0.04);
-            model.rotation.x = 0.5;
-            this.scene.add(model);
+    protected async loadModelRock3(): Promise<void> {
+        return new Promise((res) => {
+            glbLoader.load(`${BASE_PATH}models/compressed/rock3.glb`, (gltf) => {
+                this.modelRock3 = gltf.scene;
+                this.modelRock3.position.set(0.5, 6, 0);
+                this.modelRock3.scale.set(0.06, 0.06, 0.06);
+                this.modelRock3.rotation.x = 0.6;
+                this.scene.add(this.modelRock3);
+                res();
+            });
         });
     }
 
     protected renderElemActivate(zIndex: number = 9999) {
-        if (this.renderElem) {
-            this.renderElem.style.cssText = `z-index: ${zIndex}; pointer-events: auto;`;
+        if (this.renderElem?.parentNode) {
+            (this.renderElem.parentNode as HTMLElement).style.cssText = `z-index: ${zIndex}; pointer-events: auto;`;
         }
     }
 
-    protected setOrbitControls() {
+    protected setDevOrbitControls() {
         const controls = new OrbitControls(this.camera, this.renderer.domElement);
         controls.enableDamping = true;
         controls.dampingFactor = 0.05;
         controls.screenSpacePanning = false;
         controls.minDistance = 1;
         controls.maxDistance = 100;
-        controls.maxPolarAngle = Math.PI / 2;
+        // controls.maxPolarAngle = Math.PI / 2;
         this.renderElemActivate();
     }
 
-    protected setLights(): void {
+    protected setDevLights(): void {
         const dirLight = new THREE.DirectionalLight('#ffffff', 7);
         dirLight.position.set(0, 0, 10);
         this.scene.add(dirLight);
-
-        // const pointLight = new THREE.PointLight('#AD3D00', 1000, 10, 1);
-        // pointLight.position.set(-2, -5, 0);
-        // this.scene.add(pointLight);
-
-        // RectAreaLightUniformsLib.init();
-        // const rectLight = new THREE.RectAreaLight('#AD3D00', 10, 10, 10);
-        // rectLight.position.set(0, 0, 0);
-        // this.scene.add(rectLight);
-
-        // const hemisphereLight = new THREE.HemisphereLight('#ffffff', '#AD3D00', 2);
-        // this.scene.add(hemisphereLight);
     }
 
-    protected setPlane() {
-        const geometry = new THREE.PlaneGeometry(30, 30);
-
-        this.planeMateral = new THREE.MeshBasicMaterial({ color: 0xff0000, side: THREE.DoubleSide });
-
-        const plane = new THREE.Mesh(geometry, this.planeMateral);
-
-        plane.position.y = 2;
-        plane.rotation.x = 2.3;
-        // plane.rotation.x = Math.PI / 2;
-        this.scene.add(plane);
+    protected setLights(): void {
+        this.pointLight = new THREE.PointLight('#ffffff', 5, 8.5, 1);
+        this.pointLight.position.set(1.4, 6.9, 2);
+        this.scene.add(this.pointLight);
     }
 
-    protected animatePlane() {
-        if (!this.planeMateral) return;
-
-        const r = Math.sin(this.animatePlaceTime) * 0.5 + 0.5;
-        const g = Math.sin(this.animatePlaceTime + Math.PI / 3) * 0.5 + 0.5;
-        const b = Math.sin(this.animatePlaceTime + Math.PI / 1.5) * 0.5 + 0.5;
-        // @ts-ignore
-        this.planeMateral.color.setRGB(r, g, b);
-        this.animatePlaceTime += 0.01;
-    }
-
-    protected setGrid() {
+    protected setDevGrid() {
         const gridHelper = new THREE.GridHelper(40, 40);
         this.scene.add(gridHelper);
     }
@@ -179,30 +153,111 @@ class ThreeMainScene {
         const width = this.renderElemRect.width || 0;
         const height = this.renderElemRect.height || 0;
 
-        this.camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 100);
+        this.camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
         this.camera.position.set(0, 2, 8);
-        this.camera.lookAt(0, 1, 0);
+        this.camera.lookAt(0, 2, 8);
+        this.resize();
     }
 
-    public init() {
+    protected animatePlane() {
+        this.planeUniforms.time.value += 0.05;
+    }
+
+    protected setPlane() {
+        this.planeUniforms = {
+            time: { value: 0.0 },
+        };
+
+        const material = new THREE.ShaderMaterial({
+            uniforms: this.planeUniforms,
+            vertexShader: `
+                varying vec2 vUv;
+                void main() {
+                    vUv = uv;
+                    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                }
+            `,
+            fragmentShader: `
+                uniform float time;
+                varying vec2 vUv;
+        
+                void main() {
+                    // Динамически изменяемые цвета (плавно изменяются во времени)
+                    vec3 color1 = vec3(
+                        0.5 + 0.5 * sin(time * 0.5),  // R
+                        0.5 + 0.5 * sin(time * 0.7),  // G
+                        0.5 + 0.5 * sin(time * 0.9)   // B
+                    );
+                    
+                    vec3 color2 = vec3(
+                        0.5 + 0.5 * sin(time * 0.8 + 2.0),  
+                        0.5 + 0.5 * sin(time * 0.6 + 2.0),  
+                        0.5 + 0.5 * sin(time * 0.4 + 2.0)  
+                    );
+        
+                    // Градиентный переход
+                    vec3 gradient = mix(color1, color2, vUv.y);
+        
+                    // Дополнительный эффект свечения
+                    vec3 glow = gradient * (1.0 + 0.3 * sin(time * 1.5));
+        
+                    gl_FragColor = vec4(glow, 1.0);
+                }
+            `,
+            transparent: true,
+        });
+
+        const geometry = new THREE.PlaneGeometry(20, 20);
+        const plane = new THREE.Mesh(geometry, material);
+
+        plane.position.y = 5;
+        plane.position.z = -4;
+        plane.rotation.x = -0.1;
+        plane.rotation.z = -0.5;
+
+        this.scene.add(plane);
+    }
+
+    public async init() {
         if (!this.renderElemSelector) return;
 
         this.setRenderElem();
         this.setRenderer();
         this.setScene();
+
+        // (!important) wait models
+        await Promise.all([
+            this.loadModelLaptop(),
+            this.loadModelRock1(),
+            this.loadModelRock2(),
+            this.loadModelRock3(),
+        ]);
+
         this.setLights();
         // this.setPlane();
-        this.loadModelLaptop();
-        this.loadModelRock1();
-        this.loadModelRock2();
-        this.loadModelRock3();
         this.setCamera();
-        // this.setGrid();
-        // this.setOrbitControls();
         this.animateScene();
+        // this.setDevOrbitControls();
+        // this.setDevGrid();
+        // this.setDevLights();
+    }
+
+    public resize(): void {
+        if (window.matchMedia('(max-width: 1024px)').matches) {
+            this.modelLaptop.position.y = 1.6;
+            this.modelRock1.position.y = 1.5;
+            this.modelRock2.position.y = 1.6;
+            this.modelRock3.position.y = 5.7;
+            this.pointLight.position.set(1.4, 6.1, 2);
+        } else {
+            this.modelLaptop.position.y = 3.1;
+            this.modelRock1.position.y = 2.8;
+            this.modelRock2.position.y = 2.9;
+            this.modelRock3.position.y = 6;
+            this.pointLight.position.set(1.4, 6.9, 2);
+        }
+        this.renderer.setSize(window.innerWidth, this.renderElemRect.height);
+        this.camera.aspect = window.innerWidth / this.renderElemRect.height;
+        this.camera.updateProjectionMatrix();
     }
 }
-
-export const threeMainScene = new ThreeMainScene({
-    renderElemSelector: '.three-main-scene',
-});

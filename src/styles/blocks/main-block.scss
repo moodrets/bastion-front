@@ -1,7 +1,10 @@
 .main-block {
-    @apply h-[1920px]
-    overflow-hidden
-    pt-3;
+    @apply relative
+        h-[762px]
+        overflow-hidden
+        pt-3
+        md:h-[1087px]
+        xl:h-[1920px];
 
     &__logo {
         @apply p-3
@@ -22,17 +25,24 @@
     }
 
     &__links {
-        @apply flex
-        gap-3
-        mb-2
-        mt-[420px]
-        md:mt-[550px]
-        xl:mt-[620px];
+        @apply mb-2
+            mt-[420px]
+            -mx-2
+            md:mt-[550px]
+            xl:mt-[600px];
+
+        .swiper {
+            @apply px-6 py-5;
+        }
+
+        .swiper-slide {
+            @apply w-[250px]
+                md:w-[360px]
+                xl:w-[390px];
+        }
 
         .button {
-            @apply min-w-[250px]
-            md:min-w-[360px]
-            xl:min-w-[390px];
+            @apply w-full;
         }
     }
 }

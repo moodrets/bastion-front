@@ -9,4 +9,13 @@ function initCasesSlider(): Swiper {
     return swiper;
 }
 
-export { initCasesSlider };
+function initMainLinksSlider(): Swiper {
+    const swiper = new Swiper('.js-main-links-slider', {
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+    });
+
+    return swiper;
+}
+
+export { initCasesSlider, initMainLinksSlider };

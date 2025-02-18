@@ -2,8 +2,13 @@ import { createWebHistory, createRouter, RouteRecordRaw } from 'vue-router';
 import { BASE_PATH } from '@/router/basePath';
 
 // scripts
+import { ThreeMainScene } from '@/scripts/ThreeMainScene';
 import { initScrollToOnLoad } from '@/scripts/ScrollTo';
-import { threeMainScene } from '@/scripts/ThreeMainScene';
+import { initWindowResize } from '@/scripts/WindowResize';
+
+const threeMainScene = new ThreeMainScene({
+    renderElemSelector: '.three-main-scene__canvas',
+});
 
 // views
 import Main from '@/components/views/Main.vue';
@@ -33,6 +38,7 @@ const router = createRouter({
 router.afterEach(() => {
     setTimeout(() => {
         initScrollToOnLoad();
+        initWindowResize([() => threeMainScene.resize()]);
         threeMainScene.init();
     }, 150);
 });
