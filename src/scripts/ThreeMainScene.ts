@@ -83,23 +83,12 @@ export class ThreeMainScene {
 
     protected pointLight!: THREE.PointLight;
 
-    protected canvasGradient: {
+    protected gradient: {
         time: number;
-        ctx: Record<string, any>;
-        size: number;
-        texture: Record<string, any>;
-        colorList: string[];
+        material?: THREE.Material & Record<'uniforms', any>;
     } = {
         time: 0,
-        size: 2048,
-        colorList: ['#e03610', '#1920e6', '#9b19e6', '#0899c9'],
-        texture: {},
-        ctx: {},
     };
-
-    protected get getRandomGradientColor() {
-        return this.canvasGradient.colorList[Math.floor(Math.random() * this.canvasGradient.colorList.length)];
-    }
 
     protected animateScene() {
         requestAnimationFrame(this.animateScene.bind(this));
@@ -222,27 +211,43 @@ export class ThreeMainScene {
         this.camera.lookAt(0, 2, 8);
     }
 
-    protected setPlaneGradient() {
-        this.canvasGradient.size = 2048;
-
-        const canvas = document.createElement('canvas');
-        canvas.width = this.canvasGradient.size;
-        canvas.height = this.canvasGradient.size;
-
-        const ctx = canvas.getContext('2d');
-        const texture = new THREE.CanvasTexture(canvas);
-
-        this.canvasGradient.ctx = ctx as {};
-        this.canvasGradient.texture = texture;
-    }
-
     protected setPlane() {
-        this.setPlaneGradient();
+        this.gradient.material = new THREE.ShaderMaterial({
+            uniforms: {
+                uTime: { value: 0.0 },
+            },
+            vertexShader: `
+                varying vec2 vUv;
+                void main() {
+                    vUv = uv;
+                    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                }
+            `,
+            fragmentShader: `
+                varying vec2 vUv;
+                uniform float uTime;
+                
+                void main() {
+                    float gradient = (vUv.x + vUv.y) / 2.0; // 45 градусов
+                    
+                    vec3 dynamicColor = vec3(sin(uTime) * 0.5 + 0.5, cos(uTime) * 0.5 + 0.5, sin(uTime * 1.5) * 0.5 + 0.5);
+                    
+                    float smoothGradient1 = smoothstep(0.40, 0.51, gradient);
+                    float smoothGradient2 = smoothstep(0.64, 0.7, gradient);
+                    
+                    vec3 color = mix(dynamicColor, vec3(0.0, 0.0, 0.0), smoothGradient1);
+                    color = mix(color, dynamicColor, smoothGradient2);
+                    
+                    gl_FragColor = vec4(color, 1.0);
+                }
+            `,
+            side: THREE.DoubleSide,
+        });
 
-        const material = new THREE.MeshBasicMaterial({ map: this.canvasGradient.texture as THREE.Texture });
         const geometry = new THREE.PlaneGeometry(40, 40);
-        const plane = new THREE.Mesh(geometry, material);
+        const plane = new THREE.Mesh(geometry, this.gradient.material);
 
+        plane.renderOrder = -1;
         plane.position.y = 5;
         plane.position.z = -4;
 
@@ -250,37 +255,9 @@ export class ThreeMainScene {
     }
 
     protected updatePlaneGradient() {
-        this.canvasGradient.time += 0.00005;
-
-        this.canvasGradient.ctx.clearRect(0, 0, this.canvasGradient.size, this.canvasGradient.size);
-
-        let currentColor = new THREE.Color(this.canvasGradient.colorList[0]);
-        let targetColor = new THREE.Color(this.getRandomGradientColor);
-
-        if (this.canvasGradient.time >= 1) {
-            this.canvasGradient.time = 0;
-            currentColor.copy(targetColor);
-            targetColor.set(this.getRandomGradientColor);
+        if (this.gradient.material) {
+            this.gradient.material.uniforms.uTime.value += 0.001;
         }
-
-        const interpolatedColor = new THREE.Color().lerpColors(currentColor, targetColor, this.canvasGradient.time);
-
-        const gradient = this.canvasGradient.ctx.createLinearGradient(
-            0,
-            this.canvasGradient.size,
-            this.canvasGradient.size,
-            0
-        );
-
-        gradient.addColorStop(0.0, `#${interpolatedColor.getHexString()}`);
-        gradient.addColorStop(0.53, '#000000');
-        gradient.addColorStop(0.58, '#000000');
-        gradient.addColorStop(0.62, '#000000');
-        gradient.addColorStop(1.0, `#${interpolatedColor.getHexString()}`);
-
-        this.canvasGradient.ctx.fillStyle = gradient;
-        this.canvasGradient.ctx.fillRect(0, 0, this.canvasGradient.size, this.canvasGradient.size);
-        this.canvasGradient.texture.needsUpdate = true;
     }
 
     public async init() {
