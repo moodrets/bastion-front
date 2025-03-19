@@ -122,7 +122,7 @@
             xl:mt-auto;
 
         .button {
-            @apply whitespace-nowrap hover:scale-[1.1] hover:z-[100];
+            @apply whitespace-nowrap;
 
             @for $i from 1 through 20 {
                 &:nth-last-child(#{$i}) {
