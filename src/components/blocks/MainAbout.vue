@@ -21,7 +21,9 @@
                     </div>
                 </div>
                 <div class="main-about__column main-about__column--info">
-                    <div class="main-about__subtitle max-w-[160px]">Считаем, что отзывы говорят за нас</div>
+                    <div class="main-about__subtitle max-w-[160px] xl:max-w-[180px]">
+                        Считаем, что отзывы говорят за нас
+                    </div>
                     <div class="text-[10px] md:text-[18px]">
                         <a v-scroll-to="{ target: '#app-reviews' }" href="#" class="uppercase decor-link">
                             <span class="bracket-text">Смотреть отзывы</span>
