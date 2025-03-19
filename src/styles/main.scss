@@ -17,6 +17,7 @@
 @use '@/styles/elements/decor-link';
 @use '@/styles/elements/sliders';
 @use '@/styles/elements/forms';
+@use '@/styles/elements/scrollbar';
 
 // blocks
 @use '@/styles/blocks/footer';
@@ -25,6 +26,7 @@
 @use '@/styles/blocks/contact-form';
 @use '@/styles/blocks/barcode-block';
 @use '@/styles/blocks/main-block';
+@use '@/styles/blocks/main-about';
 @use '@/styles/blocks/three-main-scene';
 
 // utilities

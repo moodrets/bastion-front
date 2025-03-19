@@ -48,3 +48,21 @@
         @apply bg-black;
     }
 }
+
+.links-marquee-slider {
+    @apply px-6 py-5;
+
+    .swiper-wrapper {
+        @apply ease-linear;
+    }
+
+    .swiper-slide {
+        @apply w-[250px]
+            md:w-[360px]
+            xl:w-[390px];
+
+        .button {
+            @apply w-full;
+        }
+    }
+}

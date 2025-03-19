@@ -4,8 +4,8 @@
             <div v-angle-box class="p-3">
                 <div class="barcode-block__inner">
                     <div class="barcode-block__header">
-                        <h2 class="barcode-block__text barcode-block__title">Запустим классный проект</h2>
-                        <div class="barcode-block__text barcode-block__subtitle">вместе?</div>
+                        <h2 class="barcode-block__text barcode-block__header-first">Запустим классный проект</h2>
+                        <div class="barcode-block__text barcode-block__header-second">вместе?</div>
                     </div>
                     <div class="barcode-block__middle">
                         <div class="barcode-block__item" v-angle-box>

@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import { Autoplay } from 'swiper/modules';
 
 function initCasesSlider(): Swiper {
     const swiper = new Swiper('.js-cases-slider', {
@@ -11,8 +12,16 @@ function initCasesSlider(): Swiper {
 
 function initMainLinksSlider(): Swiper {
     const swiper = new Swiper('.js-main-links-slider', {
-        slidesPerView: 'auto',
+        modules: [Autoplay],
+        autoplay: {
+            delay: 0,
+            pauseOnMouseEnter: true,
+        },
+        loop: true,
+        speed: 4000,
         spaceBetween: 8,
+        slidesPerView: 'auto',
+        allowTouchMove: false,
     });
 
     return swiper;

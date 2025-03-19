@@ -30,19 +30,5 @@
             -mx-2
             md:mt-[550px]
             xl:mt-[600px];
-
-        .swiper {
-            @apply px-6 py-5;
-        }
-
-        .swiper-slide {
-            @apply w-[250px]
-                md:w-[360px]
-                xl:w-[390px];
-        }
-
-        .button {
-            @apply w-full;
-        }
     }
 }

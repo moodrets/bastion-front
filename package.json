@@ -14,6 +14,7 @@
         "@fontsource/manrope": "^5.1.0",
         "@fontsource/michroma": "^5.1.0",
         "@fontsource/stalinist-one": "^5.1.0",
+        "countup.js": "^2.8.0",
         "swiper": "^11.1.15",
         "three": "^0.173.0",
         "vue": "^3.5.13",

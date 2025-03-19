@@ -1,0 +1,146 @@
+.main-about {
+    @apply text-center;
+
+    &__title {
+        @apply text-[10px] 
+            mb-8
+            uppercase
+            md:text-[18px];
+    }
+
+    &__subtitle {
+        @apply text-[12px]
+            leading-[1.3]
+            mb-6
+            text-secondary/60
+            md:text-[18px]
+            xl:mb-10;
+    }
+
+    &__desc {
+        @apply px-4
+        max-w-[1174px]
+        mx-auto
+        text-[18px]
+        leading-[1.3]
+        md:text-[32px]
+        xl:text-[50px]
+        xl:mb-24;
+    }
+
+    &__grid {
+        @apply mt-16
+        pb-3
+        border-b-2
+        border-white/20
+        xl:flex
+        xl:flex-row-reverse;
+    }
+
+    &__column {
+        @apply xl:w-1/2 
+            xl:flex-none 
+            xl:min-w-0;
+    }
+
+    &__column--items {
+        @apply flex 
+            flex-col 
+            gap-3
+            xl:border-l-2
+            xl:border-white/20
+            xl:pl-5
+            xl:gap-5;
+    }
+
+    &__column--info {
+        @apply mt-20
+            flex
+            flex-col
+            items-center
+            xl:text-left
+            xl:items-start
+            xl:mt-0
+            xl:pr-5;
+    }
+
+    &__item {
+        @apply 2xl:flex
+            2xl:justify-between
+            2xl:items-end
+            2xl:gap-4
+            2xl:pb-2
+            2xl:border-b-2
+            2xl:border-secondary/60
+            2xl:last:border-none;
+
+        &-row {
+            @apply pb-1
+                flex
+                gap-2
+                mb-2
+                justify-between
+                items-end 
+                border-b-2 
+                border-white/20
+                2xl:justify-start
+                2xl:border-none
+                2xl:mb-0
+                2xl:pb-0;
+        }
+
+        &-number {
+            @apply text-[50px] 
+            leading-[1.2]
+            md:text-[142px]
+            xl:leading-[1.0];
+        }
+
+        &-value {
+            @apply text-[12px]
+                text-secondary/60
+                md:text-[22px]
+                xl:text-[18px];
+        }
+
+        &-link {
+            @apply text-center
+            text-[10px]
+            md:text-right
+            md:text-[18px];
+        }
+    }
+
+    &__slide-buttons {
+        @apply flex
+            gap-2.5
+            mt-20
+            overflow-y-hidden
+            overflow-x-scroll
+            w-full
+            p-6
+            xl:mt-auto;
+
+        .button {
+            @apply whitespace-nowrap hover:scale-[1.1] hover:z-[100];
+
+            @for $i from 1 through 20 {
+                &:nth-last-child(#{$i}) {
+                    z-index: #{$i};
+                }
+            }
+        }
+
+        @media (hover: hover) {
+            .button {
+                @apply -mr-[120px];
+            }
+
+            &:hover {
+                .button {
+                    @apply m-0;
+                }
+            }
+        }
+    }
+}

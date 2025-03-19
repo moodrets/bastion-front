@@ -13,12 +13,13 @@ import { router } from '@/router';
 
 // vue directives
 import AngleBox from '@/directives/AngleBox';
+import ScrollTo from '@/directives/ScrollTo';
 
 // vue components
 import App from '@/App.vue';
 
 function vueBootstrap() {
-    createApp(App).use(router).directive('angle-box', AngleBox).mount('#app');
+    createApp(App).use(router).directive('angle-box', AngleBox).directive('scroll-to', ScrollTo).mount('#app');
 }
 
 vueBootstrap();

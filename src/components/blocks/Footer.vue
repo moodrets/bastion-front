@@ -1,5 +1,5 @@
 <template>
-    <footer class="app-footer">
+    <footer class="app-footer" id="app-footer">
         <div class="centered">
             <div class="p-3 mb-2 select-none" v-angle-box>
                 <router-link :to="{ name: 'main' }">

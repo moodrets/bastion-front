@@ -52,4 +52,38 @@ const navigation: { name: string; title: string }[] = [
     { name: 'styles', title: 'стили' },
 ];
 
-export { casesSliderList, navigation };
+const mainBlockLinks: { name: string; subtitle: string }[] = [
+    { name: 'сервисы', subtitle: '12' },
+    { name: 'сайты', subtitle: '133' },
+    { name: 'поддержка', subtitle: '17' },
+    { name: 'брендинг', subtitle: '25' },
+    { name: 'Админ&nbsp;Панель', subtitle: '' },
+    { name: 'сервисы', subtitle: '12' },
+    { name: 'сайты', subtitle: '133' },
+    { name: 'поддержка', subtitle: '17' },
+    { name: 'брендинг', subtitle: '25' },
+    { name: 'Админ&nbsp;Панель', subtitle: '' },
+];
+
+const mainAboutValues: { number: number; value: string; link: string; linkText: string }[] = [
+    {
+        number: 100,
+        value: '%',
+        link: '#',
+        linkText: 'смотреть кейсы',
+    },
+    {
+        number: 2015,
+        value: 'год основания компании',
+        link: '#',
+        linkText: 'узнать больше',
+    },
+    {
+        number: 58,
+        value: 'успешных проектов',
+        link: '#',
+        linkText: 'связаться',
+    },
+];
+
+export { casesSliderList, mainBlockLinks, navigation, mainAboutValues };

@@ -10,16 +10,20 @@
     &__text {
         @apply text-balance
         text-[22px]
+        leading-[1.2]
         md:text-[50px];
     }
 
-    &__title {
-        @apply w-[67%]
-            lg:w-[35%];
+    &__header {
+        @apply xl:flex xl:items-end;
     }
 
-    &__subtitle {
-        @apply text-center;
+    &__header-first {
+        @apply text-left w-[65%] xl:flex-none xl:w-[33%];
+    }
+
+    &__header-second {
+        @apply text-center xl:flex-none xl:w-[33%];
     }
 
     &__middle {
