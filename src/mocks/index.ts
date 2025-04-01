@@ -86,4 +86,27 @@ const mainAboutValues: { number: number; value: string; link: string; linkText: 
     },
 ];
 
-export { casesSliderList, mainBlockLinks, navigation, mainAboutValues };
+const mainProjectsSlides: { thumb: string; mainPic: string; title: string }[] = [
+    {
+        thumb: `${BASE_PATH}files/cases-slider-pic-1.png`,
+        mainPic: `${BASE_PATH}files/temp-main-project-1.png`,
+        title: 'retouch',
+    },
+    {
+        thumb: `${BASE_PATH}files/cases-slider-pic-2.png`,
+        mainPic: `${BASE_PATH}files/temp-main-project-2.png`,
+        title: 'OSVETIM',
+    },
+    {
+        thumb: `${BASE_PATH}files/cases-slider-pic-3.png`,
+        mainPic: `${BASE_PATH}files/temp-main-project-3.png`,
+        title: 'BRILLIANT',
+    },
+    {
+        thumb: `${BASE_PATH}files/cases-slider-pic-4.png`,
+        mainPic: `${BASE_PATH}files/temp-main-project-4.png`,
+        title: 'bastion',
+    },
+];
+
+export { casesSliderList, mainBlockLinks, navigation, mainAboutValues, mainProjectsSlides };

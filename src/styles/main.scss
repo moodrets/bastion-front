@@ -7,6 +7,7 @@
 @use '@/styles/tailwindcss/base';
 @use '@/styles/base/root';
 @use '@/styles/base/defaults';
+@use '@/styles/base/typography';
 
 // elements
 @use '@/styles/tailwindcss/components';
@@ -27,6 +28,7 @@
 @use '@/styles/blocks/barcode-block';
 @use '@/styles/blocks/main-block';
 @use '@/styles/blocks/main-about';
+@use '@/styles/blocks/main-projects';
 @use '@/styles/blocks/three-main-scene';
 
 // utilities

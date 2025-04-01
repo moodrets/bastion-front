@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, EffectFade, Thumbs } from 'swiper/modules';
 
 function initCasesSlider(): Swiper {
     const swiper = new Swiper('.js-cases-slider', {
@@ -27,4 +27,28 @@ function initMainLinksSlider(): Swiper {
     return swiper;
 }
 
-export { initCasesSlider, initMainLinksSlider };
+function initMainProjectsSlider(): Swiper[] {
+    const thumbsSwiper = new Swiper('.js-main-projects-slider-thumbs', {
+        slidesPerView: 'auto',
+        speed: 400,
+        spaceBetween: 8,
+    });
+
+    const swiper = new Swiper('.js-main-projects-slider', {
+        modules: [Thumbs, EffectFade],
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true,
+        },
+        speed: 1200,
+        spaceBetween: 0,
+        slidesPerView: 1,
+        thumbs: {
+            swiper: thumbsSwiper,
+        },
+    });
+
+    return [swiper, thumbsSwiper];
+}
+
+export { initCasesSlider, initMainLinksSlider, initMainProjectsSlider };

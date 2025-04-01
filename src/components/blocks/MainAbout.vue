@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="main-about__column main-about__column--info">
-                    <div class="main-about__subtitle max-w-[160px] xl:max-w-[180px]">
+                    <div class="main-about__subtitle max-w-[180px] xl:max-w-[180px]">
                         Считаем, что отзывы говорят за нас
                     </div>
                     <div class="text-[10px] md:text-[18px]">
@@ -30,10 +30,10 @@
                         </a>
                     </div>
                     <div class="main-about__slide-buttons custom-scrollbar">
-                        <a href="#" class="button button--md button--outlined">ИСУ</a>
-                        <a href="#" class="button button--md button--outlined">Мельница</a>
-                        <a href="#" class="button button--md button--outlined">Санаторий</a>
-                        <a href="#" class="button button--md button--outlined">LI Market</a>
+                        <a href="#" class="button button--hex button--md button--outlined">ИСУ</a>
+                        <a href="#" class="button button--hex button--md button--outlined">Мельница</a>
+                        <a href="#" class="button button--hex button--md button--outlined">Санаторий</a>
+                        <a href="#" class="button button--hex button--md button--outlined">LI Market</a>
                     </div>
                 </div>
             </div>

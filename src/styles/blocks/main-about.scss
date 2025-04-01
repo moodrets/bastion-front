@@ -30,7 +30,7 @@
 
     &__grid {
         @apply mt-16
-        pb-3
+        pb-4
         border-b-2
         border-white/20
         xl:flex
@@ -49,7 +49,7 @@
             gap-3
             xl:border-l-2
             xl:border-white/20
-            xl:pl-5
+            xl:pl-4
             xl:gap-5;
     }
 
@@ -61,7 +61,7 @@
             xl:text-left
             xl:items-start
             xl:mt-0
-            xl:pr-5;
+            xl:pr-4;
     }
 
     &__item {
@@ -118,11 +118,12 @@
             overflow-y-hidden
             overflow-x-scroll
             w-full
-            p-6
+            py-6
+            px-4
             xl:mt-auto;
 
         .button {
-            @apply whitespace-nowrap;
+            @apply whitespace-nowrap font-simple text-[20px];
 
             @for $i from 1 through 20 {
                 &:nth-last-child(#{$i}) {

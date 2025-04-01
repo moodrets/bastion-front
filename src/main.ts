@@ -4,7 +4,7 @@ import '@/styles/base/fonts.scss';
 import '@/styles/main.scss';
 
 // scripts
-// import { initCasesSlider } from '@/scripts/Sliders';
+// import { initCasesSlider, initMainLinksSlider, initMainProjectsSlider } from '@/scripts/Sliders';
 // import { initScrollToOnLoad } from '@/scripts/ScrollTo';
 
 // vue imports
@@ -26,6 +26,8 @@ vueBootstrap();
 
 document.addEventListener('DOMContentLoaded', () => {
     // initCasesSlider();
+    // initMainLinksSlider();
+    // initMainProjectsSlider();
     // initScrollToOnLoad();
 });
 

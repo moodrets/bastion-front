@@ -5,6 +5,7 @@ export default {
             fontFamily: {
                 brand: '"Stalinist One", sans-serif;',
                 secondary: 'Michroma, sans-serif;',
+                simple: 'Arial, Helvetica, sans-serif',
                 base: 'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
             },
             colors: {
