@@ -1,0 +1,107 @@
+.case-card-container {
+    @apply gap-5
+        text-center
+        break-inside-avoid;
+
+    &[style*='--columns: 2'] {
+        @apply md:columns-2;
+    }
+
+    &[style*='--columns: 3'] {
+        @apply md:columns-2
+        lg:columns-3;
+    }
+
+    &--centered {
+        .case-card {
+            @apply max-w-[910px]
+            mx-auto;
+        }
+    }
+}
+
+.case-card {
+    @apply relative 
+        block
+        break-inside-avoid
+        mb-8;
+
+    &__top {
+        @apply absolute
+            z-[2]
+            left-5
+            top-5
+            right-5
+            hidden
+            pointer-events-none
+            uppercase
+            font-secondary
+            text-[18px]
+            leading-[1.2]
+            tracking-[0.4em]
+            text-left
+            lg:block;
+    }
+
+    &__number {
+        @apply mb-1;
+    }
+
+    &__year {
+        @apply mt-5;
+    }
+
+    &__media {
+        @apply relative overflow-hidden mb-3 md:mb-5;
+
+        img {
+            @apply transition-all
+            duration-300;
+        }
+
+        video {
+            @apply absolute 
+                z-[10]
+                inset-0
+                w-full
+                h-full
+                object-cover
+                transition-all
+                duration-300
+                scale-[1.2]
+                pointer-events-none
+                opacity-0;
+        }
+
+        &:hover {
+            img {
+                @apply scale-[1.15];
+            }
+
+            video {
+                @apply pointer-events-auto
+                    scale-100
+                    opacity-100;
+            }
+        }
+    }
+
+    &__cover-link {
+        @apply absolute inset-0 z-[11];
+    }
+
+    &__desc {
+        @apply mb-4
+            text-[12px]
+            leading-[1.3]
+            text-secondary/60
+            text-balance
+            max-w-[814px]
+            mx-auto
+            md:text-[18px];
+    }
+
+    .decor-link {
+        @apply text-[18px];
+    }
+}

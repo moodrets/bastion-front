@@ -13,6 +13,7 @@ export default {
                 cover: '#161415',
                 warning: '#FE5900',
                 secondary: '#898585',
+                'secondary-100': '#908888',
                 neutral: '#615D5D',
                 'button-bg': '#302D2D',
             },

@@ -14,11 +14,10 @@
 @use '@/styles/elements/progress-loader';
 @use '@/styles/elements/button';
 @use '@/styles/elements/angle-box';
-@use '@/styles/elements/bracket-text';
-@use '@/styles/elements/decor-link';
 @use '@/styles/elements/sliders';
 @use '@/styles/elements/forms';
 @use '@/styles/elements/scrollbar';
+@use '@/styles/elements/cards';
 
 // blocks
 @use '@/styles/blocks/footer';
@@ -28,7 +27,8 @@
 @use '@/styles/blocks/barcode-block';
 @use '@/styles/blocks/main-block';
 @use '@/styles/blocks/main-about';
-@use '@/styles/blocks/main-projects';
+@use '@/styles/blocks/desc-block';
+@use '@/styles/blocks/cases-thumbs';
 @use '@/styles/blocks/three-main-scene';
 
 // utilities

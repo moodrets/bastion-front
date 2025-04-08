@@ -1,7 +1,7 @@
 <template>
     <section class="main-about">
         <div class="centered">
-            <h1 class="main-about__title bracket-text">о нас</h1>
+            <h1 class="block-label bracket-text">о нас</h1>
             <div class="main-about__desc">
                 Фокусируемся на разработке сайтов, онлайн-сервисов и поддержке реализованных проектов. А еще создали
                 собственную CMS, чтобы упростить вам жизнь

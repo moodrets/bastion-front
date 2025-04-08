@@ -1,0 +1,33 @@
+.desc-block {
+    @apply py-20 xl:py-24;
+
+    &__header {
+        @apply mb-5 xl:mb-12;
+    }
+
+    &__top {
+        @apply text-center mb-5;
+    }
+
+    &__bottom {
+        @apply text-center pt-6;
+
+        p {
+            @apply text-secondary/60
+            text-balance 
+            text-[12px]
+            max-w-[600px]
+            mx-auto
+            md:text-[18px]
+            xl:max-w-[800px];
+        }
+
+        .decor-link {
+            @apply text-[18px] mt-4;
+        }
+    }
+
+    &__middle {
+        @apply relative mb-5;
+    }
+}

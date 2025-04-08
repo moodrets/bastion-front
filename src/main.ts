@@ -4,7 +4,7 @@ import '@/styles/base/fonts.scss';
 import '@/styles/main.scss';
 
 // scripts
-// import { initCasesSlider, initMainLinksSlider, initMainProjectsSlider } from '@/scripts/Sliders';
+// import { initCasesSlider, initMainLinksSlider } from '@/scripts/Sliders';
 // import { initScrollToOnLoad } from '@/scripts/ScrollTo';
 
 // vue imports
@@ -14,12 +14,18 @@ import { router } from '@/router';
 // vue directives
 import AngleBox from '@/directives/AngleBox';
 import ScrollTo from '@/directives/ScrollTo';
+import CardHover from '@/directives/CardHover';
 
 // vue components
 import App from '@/App.vue';
 
 function vueBootstrap() {
-    createApp(App).use(router).directive('angle-box', AngleBox).directive('scroll-to', ScrollTo).mount('#app');
+    createApp(App)
+        .use(router)
+        .directive('card-hover', CardHover)
+        .directive('angle-box', AngleBox)
+        .directive('scroll-to', ScrollTo)
+        .mount('#app');
 }
 
 vueBootstrap();
@@ -27,7 +33,6 @@ vueBootstrap();
 document.addEventListener('DOMContentLoaded', () => {
     // initCasesSlider();
     // initMainLinksSlider();
-    // initMainProjectsSlider();
     // initScrollToOnLoad();
 });
 
