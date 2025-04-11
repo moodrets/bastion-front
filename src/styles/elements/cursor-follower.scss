@@ -1,0 +1,23 @@
+.image-cursor-follower {
+    @apply pointer-events-none
+        absolute
+        z-[1]
+        will-change-transform
+        left-[var(--left)]
+        top-[var(--top)]
+        opacity-0
+        scale-[0.5];
+
+    transition: left cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s, top cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s,
+        opacity 0.3s, transform 0.3s;
+
+    &.is-visible {
+        @apply opacity-100 scale-100;
+    }
+
+    img {
+        @apply w-full
+            h-full
+            object-cover;
+    }
+}

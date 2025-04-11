@@ -21,7 +21,7 @@ import type { MockCaseCardType } from '@/mocks';
 import { BASE_PATH } from '@/router/basePath';
 
 const { theme = 'particles' } = defineProps<{
-    theme?: 'particles' | 'lattice' | 'smartphones' | 'tablet';
+    theme?: 'particles' | 'lattice' | 'smartphones' | 'tablet' | 'ground' | 'nature';
     items: MockCaseCardType[];
 }>();
 </script>

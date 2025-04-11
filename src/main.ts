@@ -15,6 +15,7 @@ import { router } from '@/router';
 import AngleBox from '@/directives/AngleBox';
 import ScrollTo from '@/directives/ScrollTo';
 import CardHover from '@/directives/CardHover';
+import ImageCursorFollower from '@/directives/ImageCursorFollower';
 
 // vue components
 import App from '@/App.vue';
@@ -24,6 +25,7 @@ function vueBootstrap() {
         .use(router)
         .directive('card-hover', CardHover)
         .directive('angle-box', AngleBox)
+        .directive('image-cursor-follower', ImageCursorFollower)
         .directive('scroll-to', ScrollTo)
         .mount('#app');
 }

@@ -1,5 +1,5 @@
 <template>
-    <section class="main-cms-block py-8">
+    <section class="main-cms-block overflow-hidden py-10">
         <div class="centered">
             <div class="py-3 mb-3" v-angle-box>
                 <h2 class="brand-value-text text-center md:max-w-[90%] md:mx-auto">Bastion. CMS</h2>

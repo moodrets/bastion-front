@@ -18,8 +18,10 @@
 @use '@/styles/elements/forms';
 @use '@/styles/elements/scrollbar';
 @use '@/styles/elements/cards';
+@use '@/styles/elements/cursor-follower';
 
 // blocks
+@use '@/styles/blocks/header';
 @use '@/styles/blocks/footer';
 @use '@/styles/blocks/contact-main';
 @use '@/styles/blocks/contact-links';
@@ -29,6 +31,8 @@
 @use '@/styles/blocks/main-about';
 @use '@/styles/blocks/desc-block';
 @use '@/styles/blocks/cases-thumbs';
+@use '@/styles/blocks/all-cases';
+@use '@/styles/blocks/main-services';
 @use '@/styles/blocks/three-main-scene';
 
 // utilities

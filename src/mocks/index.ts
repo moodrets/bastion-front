@@ -161,12 +161,61 @@ const mainCasesThumbs: MockCaseCardType[] = [
     },
 ];
 
+const allCasesList: {
+    image: string;
+}[] = [
+    { image: `${BASE_PATH}files/case-card-pic-1.png` },
+    { image: `${BASE_PATH}files/case-card-pic-2.png` },
+    { image: `${BASE_PATH}files/case-card-pic-3.png` },
+    { image: `${BASE_PATH}files/case-card-pic-4.png` },
+    { image: `${BASE_PATH}files/case-card-pic-5.png` },
+    { image: `${BASE_PATH}files/case-card-pic-6.png` },
+    { image: `${BASE_PATH}files/case-card-pic-7.png` },
+    { image: `${BASE_PATH}files/case-card-pic-8.png` },
+    { image: `${BASE_PATH}files/case-card-pic-1.png` },
+    { image: `${BASE_PATH}files/case-card-pic-2.png` },
+    { image: `${BASE_PATH}files/case-card-pic-3.png` },
+    { image: `${BASE_PATH}files/case-card-pic-4.png` },
+    { image: `${BASE_PATH}files/case-card-pic-5.png` },
+    { image: `${BASE_PATH}files/case-card-pic-6.png` },
+    { image: `${BASE_PATH}files/case-card-pic-7.png` },
+];
+
+const mainServicesList: {
+    image: string;
+    title: string;
+    link: string;
+}[] = [
+    {
+        image: `${BASE_PATH}files/case-card-pic-1.png`,
+        link: '#',
+        title: 'сервисы & сайты',
+    },
+    {
+        image: `${BASE_PATH}files/case-card-pic-2.png`,
+        link: '#',
+        title: 'брендинг & поддержка',
+    },
+    {
+        image: `${BASE_PATH}files/case-card-pic-3.png`,
+        link: '#',
+        title: 'разработка & решения',
+    },
+    {
+        image: `${BASE_PATH}files/case-card-pic-4.png`,
+        link: '#',
+        title: 'дизайн',
+    },
+];
+
 export {
     casesSliderList,
-    mainBlockLinks,
     navigation,
+    allCasesList,
     mainAboutValues,
     mainCasesThumbs,
     mainCasesCardsList,
     mainCasesCardsList2,
+    mainBlockLinks,
+    mainServicesList,
 };
