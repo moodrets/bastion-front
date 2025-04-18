@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="120 15 160 45">
+  <!-- Фон Dynamic Island -->
+  <rect x="120" y="15" width="160" height="45" rx="22.5" ry="22.5" fill="black"/>
+  
+  <!-- Увеличенная фронтальная камера -->
+  <circle cx="255" cy="37.5" r="15" fill="#1a1a1a"/>
+  <circle cx="255" cy="37.5" r="11" fill="#0f0f0f"/>
+  
+  <!-- Голубое свечение на линзе (создает настроение) -->
+  <circle cx="255" cy="37.5" r="9" fill="url(#blueGlow)" opacity="0.15"/>
+  
+  <!-- Основной блик на камере (справа сверху) с голубым оттенком -->
+  <ellipse cx="259" cy="33.5" rx="5" ry="4" fill="url(#blueHighlight)" opacity="0.8"/>
+  
+  <!-- Дополнительный маленький блик (внизу слева) с голубоватым оттенком -->
+  <ellipse cx="251" cy="41" rx="2.5" ry="2" fill="url(#lightBlueHighlight)" opacity="0.6"/>
+  
+  <!-- Естественное кольцевое свечение по краю линзы -->
+  <circle cx="255" cy="37.5" r="13" fill="none" stroke="url(#blueRing)" stroke-width="0.7" opacity="0.25"/>
+  
+  <!-- Центральная точка объектива с легким голубым отливом -->
+  <circle cx="255" cy="37.5" r="4" fill="#2d2d2d"/>
+  <circle cx="255" cy="37.5" r="2.5" fill="#252525"/>
+  <circle cx="256.5" cy="36" r="1" fill="#4a7a9c" opacity="0.3"/>
+  
+  <!-- Градиенты для естественных голубых бликов -->
+  <defs>
+    <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#4fa8ff"/>
+      <stop offset="100%" stop-color="#003366" stop-opacity="0"/>
+    </radialGradient>
+    
+    <linearGradient id="blueHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#a0d8ff"/>
+      <stop offset="100%" stop-color="#68b9ff"/>
+    </linearGradient>
+    
+    <linearGradient id="lightBlueHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c5e3ff"/>
+    </linearGradient>
+    
+    <linearGradient id="blueRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#80c2ff"/>
+      <stop offset="50%" stop-color="#4fa8ff"/>
+      <stop offset="100%" stop-color="#4682b4"/>
+    </linearGradient>
+  </defs>
+</svg>
