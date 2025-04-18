@@ -16,7 +16,7 @@
                     <div class="swiper links-marquee-slider js-main-links-slider">
                         <div class="swiper-wrapper">
                             <div v-for="(link, linkIndex) in mainBlockLinks" :key="linkIndex" class="swiper-slide">
-                                <a href="#" class="button button--outlined button--responsive uppercase">
+                                <a href="#" class="button button--rounded button--outlined button--responsive">
                                     <span v-html="link.name"></span>
                                     <sup>{{ link.subtitle }}</sup>
                                 </a>

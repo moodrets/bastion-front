@@ -30,10 +30,10 @@
                         </a>
                     </div>
                     <div class="main-about__slide-buttons custom-scrollbar">
-                        <a href="#" class="button button--hex button--md button--outlined">ИСУ</a>
-                        <a href="#" class="button button--hex button--md button--outlined">Мельница</a>
-                        <a href="#" class="button button--hex button--md button--outlined">Санаторий</a>
-                        <a href="#" class="button button--hex button--md button--outlined">LI Market</a>
+                        <a href="#" class="button button--hex button--md button--rounded button--outlined">ИСУ</a>
+                        <a href="#" class="button button--hex button--md button--rounded button--outlined">Мельница</a>
+                        <a href="#" class="button button--hex button--md button--rounded button--outlined">Санаторий</a>
+                        <a href="#" class="button button--hex button--md button--rounded button--outlined">LI Market</a>
                     </div>
                 </div>
             </div>

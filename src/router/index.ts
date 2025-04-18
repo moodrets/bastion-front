@@ -4,7 +4,7 @@ import { BASE_PATH } from '@/router/basePath';
 // scripts
 import { initThreeMainScene, mouseMoveScene, resizeScene } from '@/scripts/ThreeMainScene';
 import { initScrollToOnLoad } from '@/scripts/ScrollTo';
-import { addHandler } from '@/scripts/GeneralHandlers';
+import { addGlobalHandler } from '@/scripts/GeneralHandlers';
 
 // views
 import Main from '@/components/views/Main.vue';
@@ -34,8 +34,8 @@ const router = createRouter({
 router.afterEach(() => {
     setTimeout(() => {
         initScrollToOnLoad();
-        addHandler('resize', window, [() => resizeScene()]);
-        addHandler('mousemove', document, [(e) => mouseMoveScene(e)]);
+        addGlobalHandler('resize', window, [() => resizeScene()]);
+        addGlobalHandler('mousemove', document, [(e) => mouseMoveScene(e)]);
         initThreeMainScene();
     }, 150);
 });

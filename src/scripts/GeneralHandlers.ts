@@ -1,4 +1,4 @@
-export function addHandler(
+export function addGlobalHandler(
     event: string,
     element: HTMLElement | Document | Window,
     callbacks: ((e: Event) => void)[] = []

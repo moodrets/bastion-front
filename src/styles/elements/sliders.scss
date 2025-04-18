@@ -22,7 +22,8 @@
     }
 
     &__card-image {
-        @apply overflow-hidden
+        @apply relative
+            overflow-hidden
             w-[var(--slide-width)]
             h-[var(--slide-height)];
 

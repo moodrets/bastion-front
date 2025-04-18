@@ -1,14 +1,5 @@
 import { BASE_PATH } from '@/router/basePath';
-
-export type MockCaseCardType = {
-    image: string;
-    title: string;
-    number: string;
-    link?: string;
-    desc?: string;
-    video?: string;
-    year?: string;
-};
+import { CaseCardType } from '@/types/Cases';
 
 const casesSliderList: { img: string; title: string }[] = [
     {
@@ -96,7 +87,7 @@ const mainAboutValues: { number: number; value: string; link: string; linkText: 
     },
 ];
 
-const mainCasesCardsList: MockCaseCardType[] = [
+const mainCasesCardsList: CaseCardType[] = [
     {
         number: '01',
         image: `${BASE_PATH}files/case-card-pic-1.png`,
@@ -105,6 +96,7 @@ const mainCasesCardsList: MockCaseCardType[] = [
         year: '2024',
         desc: 'Разработка сайта для заказа еды — MKITCHEN в кинотеатре Мираж.',
         link: '#',
+        theme: 'nature',
     },
 
     {
@@ -115,10 +107,11 @@ const mainCasesCardsList: MockCaseCardType[] = [
         year: '2024',
         desc: 'Не боимся решать нестандартные задачи, благодаря широкому стеку возможностей — создаем и реализуем самые уникальные проекты',
         link: '#',
+        theme: 'laptop-above',
     },
 ];
 
-const mainCasesCardsList2: MockCaseCardType[] = [
+const mainCasesCardsList2: CaseCardType[] = [
     {
         number: '03',
         image: `${BASE_PATH}files/case-card-pic-3.png`,
@@ -127,37 +120,82 @@ const mainCasesCardsList2: MockCaseCardType[] = [
         year: '2024',
         desc: 'Разработка продающего сайта для санатория Солнечный в Кисловодске с интеграцией платформы бронирования TraveLline',
         link: '#',
+        theme: 'laptop-below',
     },
 ];
 
-const mainCasesThumbs: MockCaseCardType[] = [
+const mainCasesThumbs: CaseCardType[] = [
     {
-        number: '01',
         image: `${BASE_PATH}files/case-card-pic-1.png`,
         video: `${BASE_PATH}files/card-video-1.mp4`,
+        number: '01',
         title: 'Brilliant Real estate',
         year: '2024',
+        desc: 'Разработка продающего сайта для санатория Солнечный в Кисловодске с интеграцией платформы бронирования TraveLline',
+        link: '#',
     },
     {
-        number: '02',
         image: `${BASE_PATH}files/case-card-pic-2.png`,
         video: `${BASE_PATH}files/card-video-2.mp4`,
+        number: '02',
         title: 'IAW arch',
         year: '2024',
+        desc: 'Разработка сайта IAW arch',
+        link: '#',
     },
     {
-        number: '03',
         image: `${BASE_PATH}files/case-card-pic-3.png`,
         video: `${BASE_PATH}files/card-video-3.mp4`,
-        title: 'IAW arch',
+        number: '03',
+        title: 'Mkitchen',
         year: '2024',
+        desc: 'Разработка сайта Mkitchen',
+        link: '#',
     },
     {
-        number: '03',
+        number: '04',
         image: `${BASE_PATH}files/case-card-pic-4.png`,
         video: `${BASE_PATH}files/card-video-4.mp4`,
-        title: 'IAW arch',
+        title: 'Osvetim',
         year: '2024',
+        desc: 'Разработка сайта Osvetim',
+        link: '#',
+    },
+    {
+        image: `${BASE_PATH}files/case-card-pic-1.png`,
+        video: `${BASE_PATH}files/card-video-1.mp4`,
+        number: '01',
+        title: 'Brilliant Real estate 1',
+        year: '2024',
+        desc: 'Разработка продающего сайта для санатория Солнечный в Кисловодске с интеграцией платформы бронирования TraveLline',
+        link: '#',
+    },
+    {
+        image: `${BASE_PATH}files/case-card-pic-2.png`,
+        video: `${BASE_PATH}files/card-video-2.mp4`,
+        number: '02',
+        title: 'IAW arch 2',
+        year: '2024',
+        desc: 'Разработка сайта IAW arch 2',
+        link: '#',
+    },
+    {
+        image: `${BASE_PATH}files/case-card-pic-3.png`,
+        video: `${BASE_PATH}files/card-video-3.mp4`,
+        number: '03',
+        title: 'Mkitchen 3',
+        year: '2024',
+        desc: 'Разработка сайта Mkitchen 3',
+        link: '#',
+    },
+    {
+        number: '04',
+        image: `${BASE_PATH}files/case-card-pic-4.png`,
+        video: `${BASE_PATH}files/card-video-4.mp4`,
+        title: 'Osvetim 4',
+        year: '2024',
+        desc: 'Разработка сайта Osvetim 4',
+        link: '#',
     },
 ];
 
@@ -208,8 +246,194 @@ const mainServicesList: {
     },
 ];
 
+const casesPageHeaderBlockLinks: {
+    title: string;
+    link: string;
+    count?: string;
+}[] = [
+    {
+        title: 'Все',
+        link: '#',
+    },
+    {
+        title: 'сервисы',
+        link: '#',
+        count: '12',
+    },
+    {
+        title: 'сайты',
+        link: '#',
+        count: '32',
+    },
+    {
+        title: 'брендинг',
+        link: '#',
+        count: '4',
+    },
+    {
+        title: 'дизайн',
+        link: '#',
+        count: '18',
+    },
+    {
+        title: 'e-com',
+        link: '#',
+        count: '9',
+    },
+    {
+        title: 'поддержка',
+        link: '#',
+        count: '10',
+    },
+    {
+        title: 'сервисы',
+        link: '#',
+        count: '12',
+    },
+    {
+        title: 'сайты',
+        link: '#',
+        count: '32',
+    },
+];
+
+const casesPageCards1: CaseCardType[] = [
+    {
+        number: '01',
+        image: `${BASE_PATH}files/case-card-pic-1.png`,
+        video: `${BASE_PATH}files/card-video-1.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+];
+
+const casesPageCards2: CaseCardType[] = [
+    {
+        number: '02',
+        image: `${BASE_PATH}files/case-card-pic-9.png`,
+        video: `${BASE_PATH}files/card-video-2.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+    {
+        number: '03',
+        image: `${BASE_PATH}files/case-card-pic-10.png`,
+        video: `${BASE_PATH}files/card-video-3.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+];
+
+const casesPageCards3: CaseCardType[] = [
+    {
+        number: '04',
+        image: `${BASE_PATH}files/temp-nature.png`,
+        video: `${BASE_PATH}files/card-video-3.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+];
+
+const casesPageCards4: CaseCardType[] = [
+    {
+        number: '05',
+        image: `${BASE_PATH}files/case-card-pic-3.png`,
+        video: `${BASE_PATH}files/card-video-4.mp4`,
+        title: 'Солнечный',
+        year: '2024',
+        desc: 'Разработка продающего сайта для санатория Солнечный в Кисловодске с интеграцией платформы бронирования TraveLline',
+        link: '#',
+        theme: 'laptop-below',
+    },
+];
+
+const casesPageCards5: CaseCardType[] = [
+    {
+        number: '06',
+        image: `${BASE_PATH}files/temp-tablet.png`,
+        video: `${BASE_PATH}files/card-video-2.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+];
+
+const casesPageCards6: CaseCardType[] = [
+    {
+        number: '07',
+        image: `${BASE_PATH}files/case-card-pic-5.png`,
+        video: `${BASE_PATH}files/card-video-4.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+    {
+        number: '08',
+        image: `${BASE_PATH}files/case-card-pic-4.png`,
+        video: `${BASE_PATH}files/card-video-3.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+];
+
+const casesPageCards7: CaseCardType[] = [
+    {
+        number: '09',
+        image: `${BASE_PATH}files/temp-smartphones.png`,
+        video: `${BASE_PATH}files/card-video-1.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+];
+
+const casesPageCards8: CaseCardType[] = [
+    {
+        number: '10',
+        image: `${BASE_PATH}files/case-card-pic-6.png`,
+        video: `${BASE_PATH}files/card-video-3.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+];
+
+const casesPageCards9: CaseCardType[] = [
+    {
+        number: '07',
+        image: `${BASE_PATH}files/case-card-pic-7.png`,
+        video: `${BASE_PATH}files/card-video-1.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+    {
+        number: '08',
+        image: `${BASE_PATH}files/case-card-pic-8.png`,
+        video: `${BASE_PATH}files/card-video-2.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+];
+
 export {
-    casesSliderList,
     navigation,
     allCasesList,
     mainAboutValues,
@@ -218,4 +442,15 @@ export {
     mainCasesCardsList2,
     mainBlockLinks,
     mainServicesList,
+    casesSliderList,
+    casesPageHeaderBlockLinks,
+    casesPageCards1,
+    casesPageCards2,
+    casesPageCards3,
+    casesPageCards4,
+    casesPageCards5,
+    casesPageCards6,
+    casesPageCards7,
+    casesPageCards8,
+    casesPageCards9,
 };

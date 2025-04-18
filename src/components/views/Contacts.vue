@@ -1,9 +1,9 @@
 <template>
-    <ContactMain />
-    <ContactForm />
-    <ContactLinks />
-    <CasesSlider />
-    <Footer />
+    <ContactMain></ContactMain>
+    <ContactForm></ContactForm>
+    <ContactLinks></ContactLinks>
+    <CasesSlider></CasesSlider>
+    <Footer></Footer>
 </template>
 
 <script setup lang="ts">

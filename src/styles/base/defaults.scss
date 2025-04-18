@@ -25,3 +25,9 @@ body {
         @apply opacity-100;
     }
 }
+
+.cover-link {
+    @apply absolute
+    inset-0
+    z-[1];
+}

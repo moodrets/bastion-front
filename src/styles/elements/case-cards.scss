@@ -1,0 +1,199 @@
+.case-cards {
+    $host: &;
+
+    &__thumbs {
+        @apply relative
+            z-[10]
+            flex
+            gap-2
+            overflow-x-auto
+            p-1.5
+            py-3
+            mb-5
+            lg:p-4
+            lg:mb-8
+            lg:-mt-[134px];
+
+        &-item {
+            @apply flex-none
+                w-[140px]
+                h-[90px]
+                cursor-pointer
+                transition-all
+                duration-300;
+
+            img {
+                @apply object-cover
+                    object-center
+                    w-full
+                    h-full
+                    transition-all
+                    duration-300;
+            }
+
+            &.is-active {
+                @apply cursor-auto ring ring-white/50;
+            }
+        }
+    }
+
+    &__bottom {
+        @apply text-center;
+    }
+
+    &__desc {
+        @apply max-w-[814px]
+            mx-auto
+            md:text-[18px]
+            text-[12px]
+            leading-[1.3]
+            text-secondary/60
+            text-balance;
+    }
+
+    &__more-link {
+        @apply text-[18px] mt-4;
+    }
+
+    &__top {
+        @apply absolute
+            z-[5]
+            left-5
+            top-5
+            right-5
+            hidden
+            pointer-events-none
+            uppercase
+            font-secondary
+            text-[18px]
+            leading-[1.2]
+            tracking-[0.4em]
+            text-left
+            lg:block;
+    }
+
+    &__number {
+        @apply mb-1;
+    }
+
+    &__year {
+        @apply mt-5;
+    }
+
+    &__cover-link {
+        @apply absolute inset-0 z-[11];
+    }
+
+    &__item {
+        @apply relative 
+            block
+            break-inside-avoid
+            mb-8;
+    }
+
+    &__item-media {
+        @apply relative overflow-hidden mb-3 md:mb-5;
+
+        img {
+            @apply transition-all
+            duration-300;
+        }
+
+        video {
+            @apply absolute 
+                z-[10]
+                inset-0
+                w-full
+                h-full
+                object-cover
+                transition-all
+                duration-300
+                scale-[1.2]
+                pointer-events-none
+                opacity-0;
+        }
+
+        &:hover {
+            img {
+                @apply scale-[1.15];
+            }
+
+            video {
+                @apply pointer-events-auto
+                    scale-100
+                    opacity-100;
+            }
+        }
+    }
+
+    &__scene {
+        @apply overflow-hidden 
+            relative 
+            z-[5]
+            h-[560px]
+            md:h-[840px]
+            xl:h-[1150px];
+
+        video {
+            @apply relative
+                z-[2]
+                bg-dark 
+                w-full
+                h-full
+                object-cover;
+        }
+
+        img {
+            @apply absolute
+                z-[1]
+                top-0 
+                left-[50%]
+                -translate-x-1/2
+                h-full 
+                object-cover;
+        }
+    }
+
+    &--theme-particles {
+    }
+
+    &--theme-lattice {
+    }
+
+    &--theme-smartphones {
+    }
+
+    &--theme-tablet {
+    }
+
+    &--theme-nature {
+    }
+
+    &--theme-ground {
+    }
+
+    &--centered {
+        #{$host}__item {
+            @apply max-w-[910px]
+                mx-auto;
+        }
+    }
+
+    &--columns-2 {
+        @apply md:columns-2;
+    }
+
+    &--columns-3 {
+        @apply md:columns-2
+            lg:columns-3;
+    }
+
+    &--viewtype-list {
+        @apply gap-5
+            text-center
+            break-inside-avoid;
+    }
+
+    &--viewtype-thumbs {
+    }
+}

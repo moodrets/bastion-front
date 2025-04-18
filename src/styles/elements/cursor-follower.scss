@@ -7,6 +7,7 @@
         top-[var(--top)]
         opacity-0
         scale-[0.5];
+    transform: translate3d(0, 0, 0);
 
     transition: left cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s, top cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s,
         opacity 0.3s, transform 0.3s;

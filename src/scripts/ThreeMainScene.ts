@@ -136,6 +136,8 @@ function animateScene() {
 }
 
 function resizeScene() {
+    if (!renderer) return;
+
     try {
         if (window.matchMedia('(max-width: 1024px)').matches) {
             threeModelsList.forEach((model) => {

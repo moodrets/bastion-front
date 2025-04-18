@@ -58,6 +58,10 @@
             ring-white/40;
     }
 
+    &--sm {
+        @apply py-3 px-6;
+    }
+
     &--md {
         @apply text-[18px] py-10 px-12;
     }
@@ -73,16 +77,25 @@
             lg:py-10;
     }
 
+    &--rounded {
+        @apply rounded-md;
+    }
+
     &--outlined {
-        @apply rounded-md
-            ring-white/20
+        @apply ring-white/20
             focus-within:ring-white/40
             hover:ring-white/40
             before:ring-white/40;
     }
 
     &--hex {
-        @apply ring-[#2a2a2a] bg-[#12111166];
+        @apply ring-[#2a2a2a] bg-[#12111166]
+        hover:bg-white/15
+        focus-within:bg-white/15;
+    }
+
+    &--secondary {
+        @apply bg-white/60 text-black;
     }
 
     &[disabled],

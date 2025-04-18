@@ -1,0 +1,15 @@
+.app-clock {
+    @apply flex-none    
+        font-secondary
+        text-[18px]
+        tracking-[0.3em]
+        leading-[1.2]
+        flex
+        items-center
+        gap-4
+        text-secondary;
+
+    &__separator {
+        @apply h-[16px] w-[2px] bg-secondary;
+    }
+}

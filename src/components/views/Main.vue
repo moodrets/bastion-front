@@ -1,28 +1,28 @@
 <template>
-    <MainPresent />
-    <MainAbout />
-    <MainProjects />
+    <MainPresent></MainPresent>
+    <MainAbout></MainAbout>
+    <MainProjects></MainProjects>
     <section class="py-10">
         <div class="centered">
-            <Cards :items="mainCasesCardsList" :columns="2" />
+            <CaseCards viewType="list" :items="mainCasesCardsList" :columns="2" />
         </div>
     </section>
     <section class="py-10">
         <div class="centered">
-            <CasesThumbs theme="lattice" :items="mainCasesThumbs" />
+            <CaseCards theme="lattice" viewType="thumbs" :items="mainCasesThumbs" :columns="1" />
         </div>
     </section>
     <section class="py-16">
         <div class="centered">
-            <Cards :items="mainCasesCardsList2" :columns="1" :centered="true" />
+            <CaseCards viewType="list" :columns="1" :centered="true" :items="mainCasesCardsList2" />
         </div>
     </section>
-    <AllCases :items="allCasesList" />
-    <MainServices />
-    <MainCMSBlock />
-    <BarcodeBlock />
-    <CasesSlider />
-    <Footer />
+    <AllCases :items="allCasesList"></AllCases>
+    <MainServices></MainServices>
+    <MainCMSBlock></MainCMSBlock>
+    <BarcodeBlock></BarcodeBlock>
+    <CasesSlider></CasesSlider>
+    <Footer></Footer>
 </template>
 
 <script setup lang="ts">
@@ -30,8 +30,7 @@ import MainPresent from '@/components/blocks/MainPresent.vue';
 import MainAbout from '@/components/blocks/MainAbout.vue';
 import BarcodeBlock from '@/components/blocks/BarcodeBlock.vue';
 import MainProjects from '@/components/blocks/MainProjects.vue';
-import Cards from '@/components/blocks/Cards.vue';
-import CasesThumbs from '@/components/blocks/CasesThumbs.vue';
+import CaseCards from '@/components/blocks/CaseCards.vue';
 import MainCMSBlock from '@/components/blocks/MainCMSBlock.vue';
 import AllCases from '@/components/blocks/AllCases.vue';
 import MainServices from '@/components/blocks/MainServices.vue';

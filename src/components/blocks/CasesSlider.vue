@@ -13,6 +13,7 @@
                         >
                     </div>
                     <div class="cases-slider__card-image">
+                        <a href="#" class="cover-link"></a>
                         <img :src="slide.img" alt="" />
                     </div>
                 </div>

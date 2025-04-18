@@ -17,8 +17,11 @@
 @use '@/styles/elements/sliders';
 @use '@/styles/elements/forms';
 @use '@/styles/elements/scrollbar';
-@use '@/styles/elements/cards';
+@use '@/styles/elements/case-cards';
 @use '@/styles/elements/cursor-follower';
+
+// components
+@use '@/styles/components/clock';
 
 // blocks
 @use '@/styles/blocks/header';
@@ -27,10 +30,9 @@
 @use '@/styles/blocks/contact-links';
 @use '@/styles/blocks/contact-form';
 @use '@/styles/blocks/barcode-block';
-@use '@/styles/blocks/main-block';
+@use '@/styles/blocks/main-present';
 @use '@/styles/blocks/main-about';
 @use '@/styles/blocks/desc-block';
-@use '@/styles/blocks/cases-thumbs';
 @use '@/styles/blocks/all-cases';
 @use '@/styles/blocks/main-services';
 @use '@/styles/blocks/three-main-scene';

@@ -1,0 +1,73 @@
+.app-header {
+    @apply py-5 overflow-hidden;
+
+    &__inner {
+        @apply flex
+            items-center
+            px-5;
+    }
+
+    &__right {
+        @apply ml-auto
+            flex
+            items-center;
+    }
+
+    &__logo {
+        @apply flex-none 
+            mr-10
+            xl:mr-[100px];
+
+        img {
+            @apply max-w-[44px];
+        }
+
+        a {
+            @apply inline-flex
+                items-center
+                gap-2.5;
+        }
+
+        &-text {
+            @apply font-brand
+                leading-[1.0]
+                text-[13px]
+                md:text-[24px]
+                md:pt-1;
+        }
+    }
+
+    &__nav {
+        @apply mr-4;
+
+        ul {
+            @apply flex
+            gap-4
+            items-center
+            capitalize
+            xl:gap-10;
+        }
+    }
+
+    &__buttons {
+        @apply flex
+            gap-1;
+
+        .button {
+            @apply text-[10px]
+                md:text-[18px];
+
+            &--plus {
+                @apply hidden xl:block tracking-[0];
+            }
+
+            &--callback {
+                @apply md:min-w-[300px];
+            }
+
+            &--mobile-menu {
+                @apply py-0 px-4 md:px-5 xl:hidden;
+            }
+        }
+    }
+}
