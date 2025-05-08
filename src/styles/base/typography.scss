@@ -51,6 +51,14 @@
         xl:text-[142px];
 }
 
+.block-subtitle {
+    @apply text-[22px]
+        mb-6
+        leading-[1.2]
+        md:text-[32px]
+        xl:text-[50px];
+}
+
 .block-label {
     @apply uppercase
         text-[10px] 

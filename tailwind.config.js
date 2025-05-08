@@ -10,7 +10,7 @@ export default {
             },
             colors: {
                 dark: '#030304',
-                cover: '#161415',
+                coverColor: '#161415',
                 warning: '#FE5900',
                 secondary: '#898585',
                 'secondary-100': '#908888',

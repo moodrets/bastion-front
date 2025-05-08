@@ -17,7 +17,7 @@
                 </ul>
             </nav>
             <div class="app-header__right">
-                <app-clock class="mr-10 hidden 2xl:flex"></app-clock>
+                <clock class="mr-10 hidden 2xl:flex"></clock>
                 <div class="app-header__buttons">
                     <button type="button" class="button--plus button button--sm button--rounded button--secondary">
                         +

@@ -433,6 +433,63 @@ const casesPageCards9: CaseCardType[] = [
     },
 ];
 
+const servicesCases: CaseCardType[] = [
+    {
+        number: '01',
+        image: `${BASE_PATH}files/case-card-pic-5.png`,
+        video: `${BASE_PATH}files/card-video-1.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+    {
+        number: '02',
+        image: `${BASE_PATH}files/case-card-pic-2.png`,
+        video: `${BASE_PATH}files/card-video-1.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+    {
+        number: '01',
+        image: `${BASE_PATH}files/case-card-pic-9.png`,
+        video: `${BASE_PATH}files/card-video-1.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+    {
+        number: '03',
+        image: `${BASE_PATH}files/case-card-pic-7.png`,
+        video: `${BASE_PATH}files/card-video-1.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+    {
+        number: '02',
+        image: `${BASE_PATH}files/case-card-pic-2.png`,
+        video: `${BASE_PATH}files/card-video-1.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+    {
+        number: '03',
+        image: `${BASE_PATH}files/case-card-pic-5.png`,
+        video: `${BASE_PATH}files/card-video-1.mp4`,
+        title: 'Brilliant Real estate',
+        year: '2024',
+        desc: 'Редизайн корпоративного сайта Инженерно-Строительного управления',
+        link: '#',
+    },
+];
+
 export {
     navigation,
     allCasesList,
@@ -453,4 +510,5 @@ export {
     casesPageCards7,
     casesPageCards8,
     casesPageCards9,
+    servicesCases,
 };

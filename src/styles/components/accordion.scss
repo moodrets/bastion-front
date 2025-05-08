@@ -1,0 +1,24 @@
+.app-accordion {
+    $host: &;
+
+    &__top {
+    }
+
+    &__body {
+        @apply overflow-hidden
+            grid
+            transition-all
+            duration-300;
+        grid-template-rows: 0fr;
+    }
+
+    &.is-open {
+        #{$host}__top {
+            @apply mb-5;
+        }
+
+        #{$host}__body {
+            grid-template-rows: 1fr;
+        }
+    }
+}

@@ -17,6 +17,7 @@ import ImageCursorFollower from '@/directives/ImageCursorFollower';
 
 // vue components
 import Clock from '@/components/common/Clock.vue';
+import Accordion from '@/components/common/Accordion.vue';
 import App from '@/App.vue';
 
 function vueBootstrap() {
@@ -25,7 +26,8 @@ function vueBootstrap() {
         .directive('angle-box', AngleBox)
         .directive('image-cursor-follower', ImageCursorFollower)
         .directive('scroll-to', ScrollTo)
-        .component('app-clock', Clock)
+        .component('clock', Clock)
+        .component('accordion', Accordion)
         .mount('#app');
 }
 
