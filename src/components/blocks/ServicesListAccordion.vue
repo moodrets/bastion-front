@@ -20,7 +20,7 @@
                     </div>
                 </template>
                 <template #body>
-                    <div class="bg-coverColor mb-8 p-5 xl:flex xl:items-center xl:gap-5">
+                    <div class="bg-ash-900 mb-8 p-5 xl:flex xl:items-center xl:gap-5">
                         <div class="mb-7 xl:min-w-0 xl:flex-1 xl:mb-0">
                             <img
                                 class="block mx-auto xl:max-w-[270px] xl:m-0"

@@ -7,9 +7,9 @@
         flex
         items-center
         gap-4
-        text-secondary;
+        text-ash-500;
 
     &__separator {
-        @apply h-[16px] w-[2px] bg-secondary;
+        @apply h-[16px] w-[2px] bg-ash-500;
     }
 }

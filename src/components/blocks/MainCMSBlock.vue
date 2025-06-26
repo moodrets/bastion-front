@@ -9,8 +9,8 @@
                     наша уникальная разработка, которая упрощает вашу жизнь
                 </div>
                 <div class="my-[100px] size-10 mx-auto relative md:my-[120px] xl:my-[180px]">
-                    <div class="h-full w-[3px] bg-secondary absolute left-1/2 -translate-x-1/2"></div>
-                    <div class="w-full h-[3px] bg-secondary absolute top-1/2 -translate-y-1/2"></div>
+                    <div class="h-full w-[3px] bg-ash-500 absolute left-1/2 -translate-x-1/2"></div>
+                    <div class="w-full h-[3px] bg-ash-500 absolute top-1/2 -translate-y-1/2"></div>
                 </div>
                 <div class="flex">
                     <div class="flex-1">

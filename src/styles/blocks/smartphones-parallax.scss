@@ -1,0 +1,56 @@
+.smartphones-parallax {
+    --rounded: 12px;
+
+    @apply overflow-hidden;
+
+    @screen md {
+        --rounded: 20px;
+    }
+
+    @screen xl {
+        --rounded: 54px;
+    }
+
+    &__item {
+        @apply relative
+        flex-none
+        p-[10px]
+        w-[160px]
+        h-[330px]
+        md:flex-[0_0_auto]
+        md:w-[240px]
+        md:h-[484px]
+        md:p-[14px]
+        xl:flex-auto
+        xl:w-[600px]
+        xl:h-[1210px]
+        xl:p-[30px];
+
+        &:before {
+            // background: url('/img/iphone.webp') no-repeat center / 100% 100%;
+            background: url('/img/iphone.png') no-repeat center / 100% 100%;
+            @apply content-['']    
+            absolute 
+            bg-no-repeat
+            bg-center
+            left-0 
+            top-0 
+            bottom-0 
+            right-0;
+        }
+
+        video {
+            @apply w-full 
+                h-full 
+                object-cover 
+                rounded-[var(--rounded)];
+        }
+
+        img {
+            @apply w-full 
+                h-full 
+                object-cover 
+                rounded-[var(--rounded)];
+        }
+    }
+}

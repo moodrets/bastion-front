@@ -9,13 +9,14 @@ export default {
                 base: 'Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
             },
             colors: {
-                dark: '#030304',
-                coverColor: '#161415',
-                warning: '#FE5900',
-                secondary: '#898585',
-                'secondary-100': '#908888',
-                neutral: '#615D5D',
-                'button-bg': '#302D2D',
+                dark: '#030304', // ранее: dark
+                accent: '#FE5900', // ранее warning
+                'ash-900': '#161415', // ранее coverColor
+                'ash-800': '#191818', // ранее dark-100
+                'ash-700': '#302D2D', // ранее button-bg
+                'ash-600': '#615D5D', // ранее neutral
+                'ash-500': '#898585', // ранее secondary
+                'ash-400': '#908888', // ранее secondary-100
             },
             boxShadow: {
                 'progress-loader': '0px 0px 15px 0 #FE5900',

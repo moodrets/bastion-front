@@ -21,7 +21,7 @@
         @apply w-[var(--cell-width)]
         h-[var(--cell-height)]
         animate-[1.5s_progressFade_infinite]
-        bg-warning
+        bg-accent
         shadow-progress-loader;
 
         @for $i from 1 through 6 {

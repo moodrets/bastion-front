@@ -19,10 +19,12 @@
 @use '@/styles/elements/scrollbar';
 @use '@/styles/elements/case-cards';
 @use '@/styles/elements/cursor-follower';
+@use '@/styles/elements/reviews-list';
 
 // components
 @use '@/styles/components/clock';
 @use '@/styles/components/accordion';
+@use '@/styles/components/offcanvas';
 
 // blocks
 @use '@/styles/blocks/header';
@@ -37,6 +39,8 @@
 @use '@/styles/blocks/all-cases';
 @use '@/styles/blocks/main-services';
 @use '@/styles/blocks/three-main-scene';
+@use '@/styles/blocks/services-cases';
+@use '@/styles/blocks/smartphones-parallax';
 
 // utilities
 @use '@/styles/tailwindcss/utilities';

@@ -7,7 +7,7 @@ import '@/styles/main.scss';
 // import { initScrollToOnLoad } from '@/scripts/ScrollTo';
 
 // vue imports
-import { createApp } from 'vue';
+import { createApp, defineComponent, h } from 'vue';
 import { router } from '@/router';
 
 // vue directives
@@ -21,7 +21,13 @@ import Accordion from '@/components/common/Accordion.vue';
 import App from '@/App.vue';
 
 function vueBootstrap() {
-    createApp(App)
+    const root = defineComponent({
+        setup() {
+            return () => h(App);
+        },
+    });
+
+    createApp(root)
         .use(router)
         .directive('angle-box', AngleBox)
         .directive('image-cursor-follower', ImageCursorFollower)

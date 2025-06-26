@@ -7,9 +7,9 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-secondary/60 rounded-xl;
+    @apply bg-ash-500/60 rounded-xl;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    @apply bg-secondary/100;
+    @apply bg-ash-500/100;
 }

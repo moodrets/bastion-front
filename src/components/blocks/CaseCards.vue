@@ -34,7 +34,7 @@
                     <img :src="item.image" :alt="item.title" />
                 </div>
             </div>
-            <div class="case-cards__bottom">
+            <div v-if="!hideCardBottomDesc" class="case-cards__bottom">
                 <div v-if="activeThumb?.desc" class="case-cards__desc">{{ activeThumb?.desc }}</div>
                 <a
                     v-if="activeThumb?.link"
@@ -78,7 +78,7 @@
                         </video>
                     </template>
                 </div>
-                <div class="case-cards__bottom">
+                <div v-if="!hideCardBottomDesc" class="case-cards__bottom">
                     <div v-if="item.desc" class="case-cards__desc">{{ item.desc }}</div>
                     <a v-if="item.link" :href="item.link" class="case-cards__more-link decor-link uppercase">
                         <span class="bracket-text">Узнать больше</span>
@@ -99,12 +99,14 @@ const {
     viewType = 'list',
     centered = false,
     items = [],
+    hideCardBottomDesc = false,
 } = defineProps<{
     items: CaseCardType[];
     theme?: CaseContainerThemeType;
     viewType?: 'list' | 'thumbs';
     columns?: number;
     centered?: boolean;
+    hideCardBottomDesc?: boolean;
 }>();
 
 const activeThumb = ref<CaseCardType | null>(null);
