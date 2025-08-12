@@ -5,12 +5,14 @@ import { BASE_PATH } from '@/router/basePath';
 import { initThreeMainScene, mouseMoveScene, resizeScene } from '@/scripts/ThreeMainScene';
 import { initScrollToOnLoad } from '@/scripts/ScrollTo';
 import { addGlobalHandler } from '@/scripts/GeneralHandlers';
+import { initGallery } from '@/scripts/Gallery';
 
 // views
 import Main from '@/components/views/Main.vue';
 import Cases from '@/components/views/Cases.vue';
 import About from '@/components/views/About.vue';
 import Services from '@/components/views/Services.vue';
+import CMS from '@/components/views/CMS.vue';
 import Contacts from '@/components/views/Contacts.vue';
 import Styles from '@/components/views/Styles.vue';
 
@@ -19,6 +21,7 @@ const routes: RouteRecordRaw[] = [
     { path: `${BASE_PATH}cases`, name: 'cases', component: Cases },
     { path: `${BASE_PATH}about`, name: 'about', component: About },
     { path: `${BASE_PATH}services`, name: 'services', component: Services },
+    { path: `${BASE_PATH}cms`, name: 'cms', component: CMS },
     { path: `${BASE_PATH}contacts`, name: 'contacts', component: Contacts },
     { path: `${BASE_PATH}styles`, name: 'styles', component: Styles },
 ];
@@ -37,6 +40,7 @@ router.afterEach(() => {
         addGlobalHandler('resize', window, [() => resizeScene()]);
         addGlobalHandler('mousemove', document, [(e) => mouseMoveScene(e)]);
         initThreeMainScene();
+        initGallery();
     }, 150);
 });
 

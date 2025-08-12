@@ -27,4 +27,37 @@ function initMainLinksSlider(): Swiper {
     return swiper;
 }
 
-export { initCasesSlider, initMainLinksSlider };
+function initReviewsSlider(): Swiper[] {
+    const titlesSwiper = new Swiper('.js-reviews-slider-titles', {
+        allowTouchMove: false,
+        speed: 900,
+    });
+
+    const descSwiper = new Swiper('.js-reviews-slider-desc', {
+        allowTouchMove: false,
+        speed: 1200,
+    });
+
+    const imageSwiper = new Swiper('.js-reviews-slider-images', {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        slideToClickedSlide: true,
+        speed: 500,
+        spaceBetween: 40,
+        breakpoints: {
+            768: {
+                spaceBetween: 60,
+            },
+        },
+        on: {
+            slideChange(swiper) {
+                titlesSwiper.slideTo(swiper.activeIndex);
+                descSwiper.slideTo(swiper.activeIndex);
+            },
+        },
+    });
+
+    return [titlesSwiper, imageSwiper, descSwiper];
+}
+
+export { initCasesSlider, initMainLinksSlider, initReviewsSlider };

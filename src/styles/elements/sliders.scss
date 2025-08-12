@@ -67,3 +67,12 @@
         }
     }
 }
+
+.reviews-images-slider {
+    .swiper-slide {
+        &:not([class*='active']) {
+            @apply opacity-40
+                hover:opacity-100;
+        }
+    }
+}

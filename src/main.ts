@@ -1,10 +1,13 @@
 // styles
+import 'baguettebox.js/dist/baguetteBox.min.css';
+import 'animate.css';
 import '@/styles/base/fonts.scss';
 import '@/styles/main.scss';
 
 // scripts
-// import { initCasesSlider, initMainLinksSlider } from '@/scripts/Sliders';
+// import { initCasesSlider, initMainLinksSlider, initReviewsSlider } from '@/scripts/Sliders';
 // import { initScrollToOnLoad } from '@/scripts/ScrollTo';
+// import { initGallery } from '@/scripts/Gallery';
 
 // vue imports
 import { createApp, defineComponent, h } from 'vue';
@@ -15,7 +18,7 @@ import AngleBox from '@/directives/AngleBox';
 import ScrollTo from '@/directives/ScrollTo';
 import ImageCursorFollower from '@/directives/ImageCursorFollower';
 
-// vue components
+// vue global components
 import Clock from '@/components/common/Clock.vue';
 import Accordion from '@/components/common/Accordion.vue';
 import App from '@/App.vue';
@@ -41,8 +44,10 @@ vueBootstrap();
 
 document.addEventListener('DOMContentLoaded', () => {
     // initCasesSlider();
+    // initReviewsSlider();
     // initMainLinksSlider();
     // initScrollToOnLoad();
+    // initGallery();
 });
 
 document.fonts.ready.then(() => {

@@ -48,6 +48,7 @@ const navigation: { name: string; title: string }[] = [
     { name: 'main', title: 'главная' },
     { name: 'cases', title: 'кейсы' },
     { name: 'about', title: 'о нас' },
+    { name: 'cms', title: 'bastion cms' },
     { name: 'services', title: 'услуги' },
     { name: 'contacts', title: 'контакты' },
     { name: 'styles', title: 'стили' },
@@ -490,7 +491,62 @@ const servicesCases: CaseCardType[] = [
     },
 ];
 
+const servicesAccordionList = [
+    { title: 'Дизайн' },
+    { title: 'Сервисы' },
+    { title: 'Разработка' },
+    { title: 'Приложения' },
+    { title: 'Брендинг' },
+    { title: 'Поддержка' },
+];
+
+const servicesAccordionList2 = [
+    { title: 'Дизайн' },
+    { title: 'Сервисы' },
+    { title: 'Разработка' },
+    { title: 'Приложения' },
+    { title: 'Брендинг' },
+    { title: 'Поддержка' },
+    { title: 'Дизайн' },
+    { title: 'Сервисы' },
+    { title: 'Разработка' },
+    { title: 'Приложения' },
+    { title: 'Поддержка' },
+];
+
+const cmsVisualImagesList = [
+    {
+        image: `${BASE_PATH}files/case-card-pic-3.png`,
+    },
+    {
+        image: `${BASE_PATH}files/case-card-pic-2.png`,
+    },
+    {
+        image: `${BASE_PATH}files/case-card-pic-1.png`,
+    },
+    {
+        image: `${BASE_PATH}files/case-card-pic-9.png`,
+    },
+    {
+        image: `${BASE_PATH}files/case-card-pic-4.png`,
+    },
+    {
+        image: `${BASE_PATH}files/case-card-pic-5.png`,
+    },
+    {
+        image: `${BASE_PATH}files/case-card-pic-6.png`,
+    },
+    {
+        image: `${BASE_PATH}files/case-card-pic-7.png`,
+    },
+    {
+        image: `${BASE_PATH}files/case-card-pic-8.png`,
+    },
+];
+
 export {
+    servicesAccordionList,
+    servicesAccordionList2,
     navigation,
     allCasesList,
     mainAboutValues,
@@ -511,4 +567,5 @@ export {
     casesPageCards8,
     casesPageCards9,
     servicesCases,
+    cmsVisualImagesList,
 };

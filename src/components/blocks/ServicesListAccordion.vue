@@ -54,27 +54,5 @@
 
 <script setup lang="ts">
 import { BASE_PATH } from '@/router/basePath';
-
-const servicesAccordionList = [
-    { title: 'Дизайн' },
-    { title: 'Сервисы' },
-    { title: 'Разработка' },
-    { title: 'Приложения' },
-    { title: 'Брендинг' },
-    { title: 'Поддержка' },
-];
-
-const servicesAccordionList2 = [
-    { title: 'Дизайн' },
-    { title: 'Сервисы' },
-    { title: 'Разработка' },
-    { title: 'Приложения' },
-    { title: 'Брендинг' },
-    { title: 'Поддержка' },
-    { title: 'Дизайн' },
-    { title: 'Сервисы' },
-    { title: 'Разработка' },
-    { title: 'Приложения' },
-    { title: 'Поддержка' },
-];
+import { servicesAccordionList, servicesAccordionList2 } from '@/mocks';
 </script>
